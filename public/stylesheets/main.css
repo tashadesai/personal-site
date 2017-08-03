@@ -1,0 +1,78 @@
+ #parent {
+  height: 100em;
+  overflow: hidden;
+  position: relative;
+}
+
+.layer {
+  background-position: bottom center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.number1 {
+   background-image: url('http://localhost:1337/layer-images/layer1.png');
+   background-size: contain;
+}
+.number2 {
+   background-image: url('http://localhost:1337/layer-images/layer2.png');
+   background-size: contain;
+}
+.number3 {
+   background-image: url('http://localhost:1337/layer-images/layer3.png');
+   background-size: contain;
+}
+.number4 {
+   background-image: url('http://localhost:1337/layer-images/layer4.png');
+   background-size: contain;
+}
+.number5 {
+   background-image: url('input_link_to_image_here');
+}
+.number6 {
+   background-image: url('input_link_to_image_here');
+}
+.nameLogo {
+  background-size: 50%;
+  background-position-y: 50%;
+  background-image: url('http://localhost:1337/layer-images/nameLwr.png')
+}
+
+.menu {
+  background: #AAAAAA;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  color: white;
+  z-index: 999;
+  font-family: sans-serif;
+}
+
+.allMenuButtons {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.menuButton {
+  display: inline-block;
+  margin: 0 1.5em 0 1.5em;
+}
+
+.fixedMenu {
+  background: #AAAAAA;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  color: white;
+  z-index: 999;
+  font-family: sans-serif;
+}
