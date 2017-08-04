@@ -1,7 +1,10 @@
- #parent {
+ #header {
   height: 100em;
   overflow: hidden;
   position: relative;
+
+  /* display: flex;
+  justify-content: center; */
 }
 
 .layer {
@@ -16,19 +19,19 @@
 
 .number1 {
    background-image: url('http://localhost:1337/layer-images/layer1.png');
-   background-size: contain;
+   background-size: cover;
 }
 .number2 {
    background-image: url('http://localhost:1337/layer-images/layer2.png');
-   background-size: contain;
+   background-size: cover;
 }
 .number3 {
    background-image: url('http://localhost:1337/layer-images/layer3.png');
-   background-size: contain;
+   background-size: cover;
 }
 .number4 {
    background-image: url('http://localhost:1337/layer-images/layer4.png');
-   background-size: contain;
+   background-size: cover;
 }
 .number5 {
    background-image: url('input_link_to_image_here');
@@ -43,7 +46,7 @@
 }
 
 .menu {
-  background: #AAAAAA;
+  background: #606060;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -66,7 +69,7 @@
 }
 
 .fixedMenu {
-  background: #AAAAAA;
+  background: #606060;
   position: fixed;
   top: 0;
   left: 0;
@@ -75,4 +78,10 @@
   color: white;
   z-index: 999;
   font-family: sans-serif;
+}
+
+.container {
+    /* display: flex; */
+    justify-content: center;
+    /* flex-direction: column; */
 }

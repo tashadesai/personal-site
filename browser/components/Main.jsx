@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
+import Menu from './Menu.jsx';
+import Content from './Content.jsx';
 
 
 class Main extends Component {
@@ -60,52 +62,18 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
-         <div className="layer menu toBeStickied parallax" data-depth="1.00">
-          <ul className="allMenuButtons">
-              <li className="menuButton">
-                <h2>PROJECTS</h2>
-              </li>
-              <li className="menuButton">
-                <h2>ABOUT</h2>
-              </li>
-              <li className="menuButton">
-                <h2>RESUME</h2>
-              </li>
-              <li className="menuButton">
-                <h2>CONTACT</h2>
-              </li>
-          </ul>
-        </div>
-        {/* <div className="fixedMenu" data-depth="1.00">
-          <ul className="allMenuButtons">
-              <li className="menuButton">
-                <h2>PROJECTS</h2>
-              </li>
-              <li className="menuButton">
-                <h2>ABOUT</h2>
-              </li>
-              <li className="menuButton">
-                <h2>RESUME</h2>
-              </li>
-              <li className="menuButton">
-                <h2>CONTACT</h2>
-              </li>
-          </ul>
-        </div> */}
-        <div id="parent">
+      <div className="container w-100">
+        <div id="header fl w-100">
           <div className="layer number1 parallax" datatype="parallax" data-depth="1.00"></div>
           <div className="layer number2 parallax" datatype="parallax" data-depth="0.65"></div>
           <div className="layer number3 parallax" datatype="parallax" data-depth="0.50"></div>
           <div className="layer nameLogo parallax" datatype="parallax" data-depth="0.3"></div>
           <div className="layer number4 parallax" datatype="parallax" data-depth="0.80"></div>
-          {/* <div className="layer number5" datatype="parallax"></div>
-          <div className="layer number6" datatype="parallax"></div> */}
+           <img src="http://localhost:1337/layer-images/filler.png" className="picture parallax" data-depth="1.00" style={{height: `${this.innerHeight}`}} />
         </div>
-        <p>thisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthisthis</p>
-        <img src="https://i.redd.it/2oz1vk3vvbdz.jpg" />
+        <Menu />
+        <Content />
       </div>
-
     );
   }
 }
