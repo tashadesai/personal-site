@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import Projects from './Projects.jsx';
+import About from './About.jsx';
+import Contact from './Contact.jsx';
 
 
 class Content extends Component {
   render() {
     return (
-        <div id="content fl w-100">
-         <img src="https://i.redd.it/2oz1vk3vvbdz.jpg" className="picture"/>
+        <div id="content" className= "fl w-100">
+          <Projects />
+          <About />
+          <Contact />
         </div>
     );
   }

@@ -28131,11 +28131,11 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       { className: 'container w-100' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { id: 'header fl w-100' },
+        { id: 'header', className: 'fl w-100' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number1 parallax', datatype: 'parallax', 'data-depth': '1.00' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number2 parallax', datatype: 'parallax', 'data-depth': '0.65' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number3 parallax', datatype: 'parallax', 'data-depth': '0.50' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer nameLogo parallax', datatype: 'parallax', 'data-depth': '0.3' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer nameLogo parallax', datatype: 'parallax', 'data-depth': '0.50' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number4 parallax', datatype: 'parallax', 'data-depth': '0.80' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'http://localhost:1337/layer-images/filler.png', className: 'picture parallax', 'data-depth': '1.00', style: { height: `${this.innerHeight}` } })
       ),
@@ -28221,6 +28221,12 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Projects_jsx__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__About_jsx__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Contact_jsx__ = __webpack_require__(274);
+
+
+
 
 
 
@@ -28228,13 +28234,216 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'content fl w-100' },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://i.redd.it/2oz1vk3vvbdz.jpg', className: 'picture' })
+      { id: 'content', className: 'fl w-100' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects_jsx__["a" /* default */], null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__About_jsx__["a" /* default */], null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Contact_jsx__["a" /* default */], null)
     );
   }
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Content);
+
+/***/ }),
+/* 271 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(106);
+
+
+
+class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { id: 'projects', className: 'mw9 center ph3-ns' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h3',
+        { id: 'title' },
+        'Projects'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'entwine', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'entwine'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'storybookvr', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'storybookvr'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'monkeySee', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'monkey see'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'personalSite', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'This site'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Projects);
+
+/***/ }),
+/* 272 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(106);
+
+
+
+class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'about', className: 'mw5 mw6-ns center pt4' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'h3',
+          { id: 'title' },
+          'About'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'aspect-ratio aspect-ratio--4x3 mb4' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            'PICTURE'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { id: 'headshot', className: 'aspect-ratio--object cover' })
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'mw9 center ph3-ns' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'WORDS info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (About);
+
+/***/ }),
+/* 273 */,
+/* 274 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(106);
+
+
+
+class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { id: 'contact', className: 'mw9 center ph3-ns' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h3',
+        { id: 'title' },
+        'Contact'
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'email', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'Email'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'github', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'GitHub'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'linkedIn', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'LinkedIn'
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'twitter', className: 'fl w-25 pa2' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'Twitter'
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Contact);
 
 /***/ })
 /******/ ]);
