@@ -2563,7 +2563,7 @@ module.exports = PooledClass;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(214);
 /* unused harmony reexport HashRouter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(96);
-/* unused harmony reexport Link */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(216);
 /* unused harmony reexport MemoryRouter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(217);
@@ -2573,13 +2573,13 @@ module.exports = PooledClass;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(219);
 /* unused harmony reexport Redirect */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(220);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(221);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_8__Router__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(222);
 /* unused harmony reexport StaticRouter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(223);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(224);
 /* unused harmony reexport matchPath */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(225);
@@ -23813,7 +23813,7 @@ module.exports = ReactDOMInvalidARIAHook;
 
 
 const Routes = props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Router */],
+  __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Router */],
   { history: __WEBPACK_IMPORTED_MODULE_2__history__["a" /* default */] },
   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'div',
@@ -23822,9 +23822,13 @@ const Routes = props => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElem
       'main',
       null,
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Switch */],
+        __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["d" /* Switch */],
         null,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* Route */], { exact: true, path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Main_jsx__["a" /* default */] })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: '/', component: __WEBPACK_IMPORTED_MODULE_3__components_Main_jsx__["a" /* default */] }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: '/projects', component: __WEBPACK_IMPORTED_MODULE_3__components_Main_jsx__["a" /* default */] }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: '/about', component: __WEBPACK_IMPORTED_MODULE_3__components_Main_jsx__["a" /* default */] }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: '/resume', component: __WEBPACK_IMPORTED_MODULE_3__components_Main_jsx__["a" /* default */] }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: '/contact', component: __WEBPACK_IMPORTED_MODULE_3__components_Main_jsx__["a" /* default */] })
       )
     )
   )
@@ -25869,6 +25873,9 @@ const history = __WEBPACK_IMPORTED_MODULE_0_history_createBrowserHistory___defau
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Menu_jsx__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Content_jsx__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation__);
+
 
 
 
@@ -25877,6 +25884,15 @@ const history = __WEBPACK_IMPORTED_MODULE_0_history_createBrowserHistory___defau
 class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   constructor(props) {
     super(props);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    var selectedDiv = document.querySelectorAll('#' + nextProps.match.path.slice(1))[0];
+    var divOffset = selectedDiv.offsetTop;
+    var parentOffset = selectedDiv.offsetParent.offsetTop;
+    var distanceToScroll = divOffset + parentOffset - 20;
+
+    __WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation___default()(document.body, 'scrollTop', distanceToScroll, 1000, 'linearTween');
   }
 
   componentWillMount() {
@@ -25967,45 +25983,29 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: 'layer menu toBeStickied parallax', 'data-depth': '1.00' },
+      { className: 'dt w-100 layer menu toBeStickied parallax', 'data-depth': '1.00' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'ul',
-        { className: 'allMenuButtons' },
+        'div',
+        { className: 'dtc v-mid tc ph3 ph4-l center allMenuButtons' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'li',
-          { className: 'menuButton' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h2',
-            null,
-            'PROJECTS'
-          )
+          __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* Link */],
+          { to: '/projects', className: 'menuButton' },
+          'PROJECTS'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'li',
-          { className: 'menuButton' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h2',
-            null,
-            'ABOUT'
-          )
+          __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* Link */],
+          { to: '/about', className: 'menuButton' },
+          'ABOUT'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'li',
-          { className: 'menuButton' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h2',
-            null,
-            'RESUME'
-          )
+          __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* Link */],
+          { to: '/resume', className: 'menuButton' },
+          'RESUME'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'li',
-          { className: 'menuButton' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h2',
-            null,
-            'CONTACT'
-          )
+          __WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* Link */],
+          { to: '/contact', className: 'menuButton' },
+          'CONTACT'
         )
       )
     );
@@ -26032,12 +26032,35 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 
 class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+
   render() {
+    var projectDetails = [{
+      id: 'entwine',
+      name: 'entwine',
+      image: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a',
+      description: 'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+    }, {
+      id: 'storybookvr',
+      name: 'StorybookVR',
+      image: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a',
+      description: 'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+    }, {
+      id: 'monkeySee',
+      name: 'Monkey See',
+      image: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a',
+      description: 'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+    }, {
+      id: 'personalSite',
+      name: 'Personal Site',
+      image: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a',
+      description: 'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
+    }];
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { id: 'content', className: 'fl w-100' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__About_jsx__["a" /* default */], null),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects_jsx__["a" /* default */], null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects_jsx__["a" /* default */], { projectDetails: projectDetails }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Contact_jsx__["a" /* default */], null)
     );
   }
@@ -26066,66 +26089,23 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         { id: 'projectsTitle', className: 'mw9 center ph3-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/projects.png' })
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { id: 'entwine', className: 'fl w-100 w-50-ns pa3 ph4' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'entwine'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'w-70', src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { id: 'storybookvr', className: 'fl w-100 w-50-ns pa3 ph4' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'storybookvr'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'w-70', src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { id: 'monkeySee', className: 'fl w-100 w-50-ns pa3 ph4' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'monkey see'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'w-70', src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { id: 'personalSite', className: 'fl w-100 w-50-ns pa3 ph4' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'This site'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'w-70', src: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'info info info kill me now info info info info kill me now info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info info kill me now info info info info kill me now info'
-        )
-      )
+      this.props.projectDetails.map(project => {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { key: project.id, id: project.id, className: 'fl w-100 w-50-ns pa3 ph4' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            project.name
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'w-70', src: project.image }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            project.description
+          )
+        );
+      })
     );
   }
 }
@@ -26168,7 +26148,7 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
-          'Hi! I\'m Natasha, a full stack software developer based in New York. I\'m currently a teaching fellow at Fullstack Academy of Code. Before that I worked in finance and marketing and I graduated with a degree in Economics from New York University.'
+          'Hi! I\'m Natasha, a software developer based in New York. I\'m currently a teaching fellow at Fullstack Academy of Code. Before that I worked in finance and marketing and I graduated with a degree in Economics from New York University.'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
@@ -26244,6 +26224,522 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Contact);
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports) {
+
+var root
+// Browser window
+if (typeof window !== 'undefined') {
+  root = window
+// Web Worker
+} else if (typeof self !== 'undefined') {
+  root = self
+// Other environments
+} else {
+  root = this
+}
+
+module.exports = root
+
+
+/***/ }),
+/* 234 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Crossplatform Date.now()
+ *
+ * @return {Number} time in ms
+ * @api private
+ */
+module.exports = Date.now || function() {
+  return (new Date).getTime()
+}
+
+
+/***/ }),
+/* 235 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.rAF = undefined;
+
+var _easings = __webpack_require__(236);
+
+var _easings2 = _interopRequireDefault(_easings);
+
+var _animationFrame = __webpack_require__(237);
+
+var _animationFrame2 = _interopRequireDefault(_animationFrame);
+
+var _package = __webpack_require__(242);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var rAF = new _animationFrame2.default();
+
+var DEBUG = process.env.NODE_ENV || true;
+var DEFAULT_ANIMATION = 'easeInQuad';
+var LIB_NAME = _package.name + '@' + _package.version;
+var TRANSITION_NOT_FOUND = LIB_NAME + ': Transition not found - ' + _package.repository.url;
+var ANIMATION_NOT_VALID = LIB_NAME + ': callback transition don\'t look like a valid equation - ' + _package.repository.url;
+var TRANSITION_NOT_VALID = LIB_NAME + ': Transition isn\'t string or Function - ' + _package.repository.url;
+
+var ANIMATION_CANCEL = 'animation-cancel';
+var ANIMATION_END = 'animation-end';
+
+var _document = typeof document !== 'undefined' ? document : {};
+var _window = typeof window !== 'undefined' ? window : {};
+
+var findAnimation = function findAnimation() {
+  var transition = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : DEFAULT_ANIMATION;
+
+  var animation = _easings2.default[transition];
+  if (animation === undefined && DEBUG) {
+    throw new Error(TRANSITION_NOT_FOUND);
+  }
+  return animation;
+};
+
+var defineAnimation = function defineAnimation(transition) {
+  if (transition.length !== 4 && DEBUG) {
+    throw new Error(ANIMATION_NOT_VALID);
+  }
+  return transition;
+};
+
+var scrollToWithAnimation = function scrollToWithAnimation() {
+  var element = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _document;
+  var direction = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'scrollTop';
+  var to = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+  var duration = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 100;
+  var transition = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : DEFAULT_ANIMATION;
+  var callback = arguments[5];
+
+  var id = void 0;
+  var start = direction === 'scrollTop' ? element.scrollTop : element.scrollLeft;
+  var distance = to - start;
+  var animationStartTime = +new Date();
+  var isAnimating = true;
+  var lastScrolledPosition = void 0;
+  var transitionFunction = void 0;
+
+  if (typeof transition === 'string' || transition === null) {
+    transitionFunction = findAnimation(transition);
+  } else if (typeof transition === 'function') {
+    transitionFunction = defineAnimation(transition);
+  } else {
+    throw new Error(TRANSITION_NOT_VALID);
+  }
+
+  var animateScroll = function animateScroll() {
+    var now = +new Date();
+    var newScrollPosition = Math.floor(transitionFunction(now - animationStartTime, start, distance, duration));
+
+    if (!lastScrolledPosition || to !== element[direction]) {
+      element[direction] = newScrollPosition;
+      lastScrolledPosition = newScrollPosition;
+    } else {
+      isAnimating = false;
+      if (callback) {
+        callback(ANIMATION_CANCEL);
+        rAF.cancel(id);
+      }
+    }
+
+    if (now > animationStartTime + duration) {
+      element[direction] = to;
+      isAnimating = false;
+      if (callback) {
+        callback(ANIMATION_END);
+        rAF.cancel(id);
+      }
+    }
+
+    if (isAnimating) {
+      id = rAF.request(animateScroll);
+    }
+  };
+
+  id = rAF.request(animateScroll);
+};
+
+// Publish public method in window
+if (_window !== {}) {
+  _window.scrollToWithAnimation = scrollToWithAnimation;
+}
+
+exports.default = scrollToWithAnimation;
+exports.rAF = rAF;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 236 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  linearTween: function linearTween(t, b, c, d) {
+    return c * t / d + b;
+  },
+  easeInQuad: function easeInQuad(t, b, c, d) {
+    t /= d;
+    return c * t * t + b;
+  },
+  easeOutQuad: function easeOutQuad(t, b, c, d) {
+    t /= d;
+    return -c * t * (t - 2) + b;
+  },
+  easeInOutQuad: function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  },
+  easeInCubic: function easeInCubic(t, b, c, d) {
+    t /= d;
+    return c * t * t * t + b;
+  },
+  easeOutCubic: function easeOutCubic(t, b, c, d) {
+    t /= d;
+    t--;
+    return c * (t * t * t + 1) + b;
+  },
+  easeInOutCubic: function easeInOutCubic(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t + b;
+    t -= 2;
+    return c / 2 * (t * t * t + 2) + b;
+  },
+  easeInQuart: function easeInQuart(t, b, c, d) {
+    t /= d;
+    return c * t * t * t * t + b;
+  },
+  easeOutQuart: function easeOutQuart(t, b, c, d) {
+    t /= d;
+    t--;
+    return -c * (t * t * t * t - 1) + b;
+  },
+  easeInOutQuart: function easeInOutQuart(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t * t + b;
+    t -= 2;
+    return -c / 2 * (t * t * t * t - 2) + b;
+  },
+  easeInQuint: function easeInQuint(t, b, c, d) {
+    t /= d;
+    return c * t * t * t * t * t + b;
+  },
+  easeOutQuint: function easeOutQuint(t, b, c, d) {
+    t /= d;
+    t--;
+    return c * (t * t * t * t * t + 1) + b;
+  },
+  easeInOutQuint: function easeInOutQuint(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t * t * t + b;
+    t -= 2;
+    return c / 2 * (t * t * t * t * t + 2) + b;
+  },
+  easeInSine: function easeInSine(t, b, c, d) {
+    return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
+  },
+  easeOutSine: function easeOutSine(t, b, c, d) {
+    return c * Math.sin(t / d * (Math.PI / 2)) + b;
+  },
+  easeInOutSine: function easeInOutSine(t, b, c, d) {
+    return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
+  },
+  easeInExpo: function easeInExpo(t, b, c, d) {
+    return c * Math.pow(2, 10 * (t / d - 1)) + b;
+  },
+  easeOutExpo: function easeOutExpo(t, b, c, d) {
+    return c * (-Math.pow(2, -10 * t / d) + 1) + b;
+  },
+  easeInOutExpo: function easeInOutExpo(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+    t--;
+    return c / 2 * (-Math.pow(2, -10 * t) + 2) + b;
+  },
+  easeInCirc: function easeInCirc(t, b, c, d) {
+    t /= d;
+    return -c * (Math.sqrt(1 - t * t) - 1) + b;
+  },
+  easeOutCirc: function easeOutCirc(t, b, c, d) {
+    t /= d;
+    t--;
+    return c * Math.sqrt(1 - t * t) + b;
+  },
+  easeInOutCirc: function easeInOutCirc(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
+    t -= 2;
+    return c / 2 * (Math.sqrt(1 - t * t) + 1) + b;
+  }
+};
+
+/***/ }),
+/* 237 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * An even better animation frame.
+ *
+ * @copyright Oleg Slobodskoi 2016
+ * @website https://github.com/kof/animationFrame
+ * @license MIT
+ */
+
+module.exports = __webpack_require__(238)
+
+
+/***/ }),
+/* 238 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var nativeImpl = __webpack_require__(239)
+var now = __webpack_require__(234)
+var performance = __webpack_require__(240)
+var root = __webpack_require__(233)
+
+// Weird native implementation doesn't work if context is defined.
+var nativeRequest = nativeImpl.request
+var nativeCancel = nativeImpl.cancel
+
+/**
+ * Animation frame constructor.
+ *
+ * Options:
+ *   - `useNative` use the native animation frame if possible, defaults to true
+ *   - `frameRate` pass a custom frame rate
+ *
+ * @param {Object|Number} options
+ */
+function AnimationFrame(options) {
+    if (!(this instanceof AnimationFrame)) return new AnimationFrame(options)
+    options || (options = {})
+
+    // Its a frame rate.
+    if (typeof options == 'number') options = {frameRate: options}
+    options.useNative != null || (options.useNative = true)
+    this.options = options
+    this.frameRate = options.frameRate || AnimationFrame.FRAME_RATE
+    this._frameLength = 1000 / this.frameRate
+    this._isCustomFrameRate = this.frameRate !== AnimationFrame.FRAME_RATE
+    this._timeoutId = null
+    this._callbacks = {}
+    this._lastTickTime = 0
+    this._tickCounter = 0
+}
+
+module.exports = AnimationFrame
+
+/**
+ * Default frame rate used for shim implementation. Native implementation
+ * will use the screen frame rate, but js have no way to detect it.
+ *
+ * If you know your target device, define it manually.
+ *
+ * @type {Number}
+ * @api public
+ */
+AnimationFrame.FRAME_RATE = 60
+
+/**
+ * Replace the globally defined implementation or define it globally.
+ *
+ * @param {Object|Number} [options]
+ * @api public
+ */
+AnimationFrame.shim = function(options) {
+    var animationFrame = new AnimationFrame(options)
+
+    root.requestAnimationFrame = function(callback) {
+        return animationFrame.request(callback)
+    }
+    root.cancelAnimationFrame = function(id) {
+        return animationFrame.cancel(id)
+    }
+
+    return animationFrame
+}
+
+/**
+ * Request animation frame.
+ * We will use the native RAF as soon as we know it does works.
+ *
+ * @param {Function} callback
+ * @return {Number} timeout id or requested animation frame id
+ * @api public
+ */
+AnimationFrame.prototype.request = function(callback) {
+  var self = this
+
+  // Alawys inc counter to ensure it never has a conflict with the native counter.
+  // After the feature test phase we don't know exactly which implementation has been used.
+  // Therefore on #cancel we do it for both.
+  ++this._tickCounter
+
+  if (nativeImpl.supported && this.options.useNative && !this._isCustomFrameRate) {
+    return nativeRequest(callback)
+  }
+
+  if (!callback) throw new TypeError('Not enough arguments')
+
+  if (this._timeoutId == null) {
+    // Much faster than Math.max
+    // http://jsperf.com/math-max-vs-comparison/3
+    // http://jsperf.com/date-now-vs-date-gettime/11
+    var delay = this._frameLength + this._lastTickTime - now()
+    if (delay < 0) delay = 0
+
+    this._timeoutId = setTimeout(function() {
+      self._lastTickTime = now()
+      self._timeoutId = null
+      ++self._tickCounter
+      var callbacks = self._callbacks
+      self._callbacks = {}
+      for (var id in callbacks) {
+        if (callbacks[id]) {
+          if (nativeImpl.supported && self.options.useNative) {
+            nativeRequest(callbacks[id])
+          } else {
+            callbacks[id](performance.now())
+          }
+        }
+      }
+    }, delay)
+  }
+
+  this._callbacks[this._tickCounter] = callback
+
+  return this._tickCounter
+}
+
+/**
+ * Cancel animation frame.
+ *
+ * @param {Number} timeout id or requested animation frame id
+ *
+ * @api public
+ */
+AnimationFrame.prototype.cancel = function(id) {
+if (nativeImpl.supported && this.options.useNative) nativeCancel(id)
+delete this._callbacks[id]
+}
+
+
+/***/ }),
+/* 239 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var root = __webpack_require__(233)
+
+// Test if we are within a foreign domain. Use raf from the top if possible.
+try {
+  // Accessing .name will throw SecurityError within a foreign domain.
+  root.top.name
+  root = root.top
+} catch(e) {}
+
+exports.request = root.requestAnimationFrame
+exports.cancel = root.cancelAnimationFrame || root.cancelRequestAnimationFrame
+exports.supported = false
+
+var vendors = ['Webkit', 'Moz', 'ms', 'O']
+
+// Grab the native implementation.
+for (var i = 0; i < vendors.length && !exports.request; i++) {
+  exports.request = root[vendors[i] + 'RequestAnimationFrame']
+  exports.cancel = root[vendors[i] + 'CancelAnimationFrame'] ||
+    root[vendors[i] + 'CancelRequestAnimationFrame']
+}
+
+// Test if native implementation works.
+// There are some issues on ios6
+// http://shitwebkitdoes.tumblr.com/post/47186945856/native-requestanimationframe-broken-on-ios-6
+// https://gist.github.com/KrofDrakula/5318048
+
+if (exports.request) {
+  exports.request.call(null, function() {
+    exports.supported = true
+  })
+}
+
+
+/***/ }),
+/* 240 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var now = __webpack_require__(234)
+var PerformanceTiming = __webpack_require__(241)
+var root = __webpack_require__(233)
+
+/**
+ * Crossplatform performance.now()
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/API/Performance.now()
+ *
+ * @return {Number} relative time in ms
+ * @api public
+ */
+exports.now = function () {
+  if (root.performance && root.performance.now) return root.performance.now()
+  return now() - PerformanceTiming.navigationStart
+}
+
+
+/***/ }),
+/* 241 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var now = __webpack_require__(234)
+
+/**
+ * Replacement for PerformanceTiming.navigationStart for the case when
+ * performance.now is not implemented.
+ *
+ * https://developer.mozilla.org/en-US/docs/Web/API/PerformanceTiming.navigationStart
+ *
+ * @type {Number}
+ * @api private
+ */
+exports.navigationStart = now()
+
+
+/***/ }),
+/* 242 */
+/***/ (function(module, exports) {
+
+module.exports = {"_from":"scrollto-with-animation","_id":"scrollto-with-animation@4.5.2","_inBundle":false,"_integrity":"sha1-WoS10aHtlDvlRiVULXcxk9bBGd4=","_location":"/scrollto-with-animation","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"scrollto-with-animation","name":"scrollto-with-animation","escapedName":"scrollto-with-animation","rawSpec":"","saveSpec":null,"fetchSpec":"latest"},"_requiredBy":["#USER","/"],"_resolved":"https://registry.npmjs.org/scrollto-with-animation/-/scrollto-with-animation-4.5.2.tgz","_shasum":"5a84b5d1a1ed943be54625542d773193d6c119de","_spec":"scrollto-with-animation","_where":"/Users/tashadesai/Projects/personal-site","author":{"name":"David Sancho","email":"dsnxmoreno@gmail.com","url":"https://github.com/davesnx"},"bugs":{"url":"https://github.com/davesnx/scrollto-with-animation/issues"},"bundleDependencies":false,"dependencies":{"animation-frame":"^0.3.0"},"deprecated":false,"description":"Animated Scroll with requestAnimationFrame. For smooth animate scrollTo defining the easing, running at 60FPS and cross-browser","devDependencies":{"babel-cli":"^6.9.0","babel-loader":"^6.2.2","babel-preset-es2015":"^6.3.13","babel-preset-stage-2":"^6.3.13","jasmine-core":"^2.3.4","json-loader":"^0.5.4","karma":"^0.13.9","karma-chrome-launcher":"^0.2.1","karma-cli":"0.1.0","karma-coverage":"^0.5.3","karma-jasmine":"^0.3.6","karma-phantomjs-launcher":"^0.2.1","karma-sourcemap-loader":"^0.3.6","karma-spec-reporter":"0.0.22","karma-story-reporter":"^0.3.1","karma-webpack":"^1.7.0","phantomjs":"^1.9.18","pre-push":"^0.1.1","webpack":"^1.12.13"},"files":["src","lib","dist","README.md"],"homepage":"https://github.com/davesnx/scrollto-with-animation#readme","keywords":["animation","scrollTo","60fps","cross-browser","requestAnimationFrame","easeInQuad","browserify"],"license":"MIT","main":"lib/index.js","name":"scrollto-with-animation","pre-commit":["test"],"repository":{"type":"git","url":"git+https://github.com/davesnx/scrollto-with-animation.git"},"scripts":{"build":"npm run clean && npm run compile:prod && npm run minify:prod","clean":"rm -rf dist/* && rm -rf lib/","compile:dev":"NODE_ENV=dev babel src --watch --out-dir lib","compile:prod":"NODE_ENV=prod babel src --out-dir lib","minify:dev":"NODE_ENV=dev webpack --watch","minify:prod":"NODE_ENV=prod webpack -p","prepublish":"npm run build","test":"NODE_ENV=prod karma start test/karma.config.js --single-run","test:dev":"NODE_ENV=prod karma start test/karma.config.js --auto-watch"},"standard":{"parser":"babel-eslint","global":["jasmine","it","describe","beforeEach","afterEach","expect","spyOn"]},"version":"4.5.2"}
 
 /***/ })
 /******/ ]);

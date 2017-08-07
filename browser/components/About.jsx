@@ -16,7 +16,7 @@ class About extends Component {
           </div>
         </div>
         <div className="fl w-100 mw9 center ph3">
-          <p>Hi! I'm Natasha, a full stack software developer based in New York.
+          <p>Hi! I'm Natasha, a software developer based in New York.
             I'm currently a teaching fellow at Fullstack Academy of Code.
             Before that I worked in finance and marketing and I graduated with a degree in Economics from New York University.
           </p>

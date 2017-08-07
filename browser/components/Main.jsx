@@ -2,11 +2,22 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Menu from './Menu.jsx';
 import Content from './Content.jsx';
+import scrollToWithAnimation from 'scrollto-with-animation'
+
 
 
 class Main extends Component {
   constructor(props) {
     super(props);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    var selectedDiv = document.querySelectorAll('#'+nextProps.match.path.slice(1))[0];
+    var divOffset = selectedDiv.offsetTop;
+    var parentOffset = selectedDiv.offsetParent.offsetTop;
+    var distanceToScroll = divOffset + parentOffset - 20;
+
+    scrollToWithAnimation(document.body, 'scrollTop', distanceToScroll, 1000, 'linearTween');
   }
 
   componentWillMount() {
