@@ -79,11 +79,12 @@
 
 .menuButton {
   display: inline-block;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Carrois Gothic', sans-serif;
    /* font-size: 1.1em; */
   font-size: 3vh;
   margin: 0 1.5em 0 1.5em;
   color: #e8e1ed;
+  letter-spacing: 0.3vh;
 }
 
 .container {
@@ -99,8 +100,9 @@
   padding-right: 10vh;
   color: lightgray;
   font-family: 'Lustria',sans-serif;
-  font-size: 2.8vh;
+  font-size: 2.4vh;
   line-height: 1.5;
+  letter-spacing: 0.08vh
 }
 
  #headshot {
@@ -131,4 +133,8 @@
 
 a {
   text-decoration: none;
+}
+
+.boldText {
+  color: #2f2f2f;
 }

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import Projects from './Projects.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
+import Resume from './Resume.jsx';
 
 
 class Content extends Component {
@@ -43,11 +44,33 @@ class Content extends Component {
       }
     ];
 
+    var contactInfo = [
+      {
+        id: 'linkedIn',
+        image: 'http://localhost:1337/images/linkedin.png',
+        link: 'https://www.linkedin.com/in/desainatasha/',
+        alt: 'desainatasha'
+      },
+      {
+        id: 'GitHub',
+        image: 'http://localhost:1337/images/github.png',
+        link: 'https://github.com/tashadesai',
+        alt: 'tashadesai'
+      },
+      {
+        id: 'Email',
+        image: 'http://localhost:1337/images/email.png',
+        link: '',
+        alt: 'tashadesai@gmail.com'
+      }
+    ]
+
     return (
         <div id="content" className= "fl w-100">
           <About />
-          <Projects projectDetails={projectDetails}/>
-          <Contact />
+          <Projects projectDetails={projectDetails} />
+          <Resume />
+          <Contact contactInfo={contactInfo} />
         </div>
     );
   }

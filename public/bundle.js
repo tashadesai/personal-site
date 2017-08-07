@@ -25928,7 +25928,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     var divOffset = selectedDiv.offsetTop;
     var parentOffset = selectedDiv.offsetParent.offsetTop;
     var distanceToScroll = divOffset + parentOffset - 20;
-    console.log("recieve ", distanceToScroll);
+    console.log("received ", distanceToScroll, "from ", selectedDiv);
 
     __WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation___default()(document.body, 'scrollTop', distanceToScroll, 1000, 'linearTween');
   }
@@ -26063,6 +26063,8 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Projects_jsx__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__About_jsx__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Contact_jsx__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Resume_jsx__ = __webpack_require__(243);
+
 
 
 
@@ -26102,12 +26104,30 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       github: 'https://github.com/tashadesai/personal-site'
     }];
 
+    var contactInfo = [{
+      id: 'linkedIn',
+      image: 'http://localhost:1337/images/linkedin.png',
+      link: 'https://www.linkedin.com/in/desainatasha/',
+      alt: 'desainatasha'
+    }, {
+      id: 'GitHub',
+      image: 'http://localhost:1337/images/github.png',
+      link: 'https://github.com/tashadesai',
+      alt: 'tashadesai'
+    }, {
+      id: 'Email',
+      image: 'http://localhost:1337/images/email.png',
+      link: '',
+      alt: 'tashadesai@gmail.com'
+    }];
+
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { id: 'content', className: 'fl w-100' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__About_jsx__["a" /* default */], null),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects_jsx__["a" /* default */], { projectDetails: projectDetails }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Contact_jsx__["a" /* default */], null)
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Resume_jsx__["a" /* default */], null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__Contact_jsx__["a" /* default */], { contactInfo: contactInfo })
     );
   }
 }
@@ -26173,7 +26193,7 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'about' },
+      { id: 'about', className: 'fl w-100' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'mw9 center ph3-ns' },
@@ -26181,25 +26201,40 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'mw5 mw6-ns center pt4' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'fl w-100 pa3 ph4' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: 'http://localhost:1337/images/me3.png', className: '' })
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'fl w-100 mw9 center ph3' },
+        { className: 'fl w-100 center ph3' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
-          'Hi! I\'m Natasha, a software developer based in New York. I\'m currently a teaching fellow at Fullstack Academy of Code. Before that I worked in finance and marketing and I graduated with a degree in Economics from New York University.'
+          'Hi! I\'m Natasha, a ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'text',
+            { className: 'boldText' },
+            'software developer'
+          ),
+          ' based in ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'text',
+            { className: 'boldText' },
+            'New York'
+          ),
+          '. Currently, I\'m a ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'text',
+            { className: 'boldText' },
+            'teaching fellow'
+          ),
+          ' at ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'text',
+            { className: 'boldText' },
+            'Fullstack Academy of Code'
+          ),
+          '.'
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
-          'Growing up, I loved making websites.  I taught myself the basics, got ahold of a copy of photoshop and went wild.  I made the kind of ridiculous websites an eight year old would make, and I loved it. I loved deciding what I wanted to build and having to figure out how to build it, I loved the creativity of it. Since then, programming has always been something I was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\'ve always loved- which led me to Fullstack Academy of Code where I spent 17 weeks learning full stack JavaScript.  Currently, I\'m a teaching fellow at Fullstack Academy.'
+          'Growing up, I loved making websites.  I taught myself the basics, got ahold of a copy of photoshop and went wild.  I made the kind of ridiculous websites an eight year old would make, and I loved it. I loved deciding what I wanted to build and having to figure out how to build it, I loved the creativity of it. Since then, programming has always been something I was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\'ve always loved- which led me to Fullstack Academy of Code where I spent 17 weeks learning full stack JavaScript.'
         )
       )
     );
@@ -26223,47 +26258,31 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'contact', className: 'fl w-100 mw9 center ph3-ns' },
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'contactTitle', className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/contact.png' }),
+      { id: 'contact', className: 'fl w-100 center ph3-ns' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { id: 'contact', className: 'mw9 center ph3-ns' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { id: 'email', className: 'fl w-25 pa2' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            'Email'
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { id: 'github', className: 'fl w-25 pa2' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            'GitHub'
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { id: 'linkedIn', className: 'fl w-25 pa2' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            'LinkedIn'
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { id: 'twitter', className: 'fl w-25 pa2' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            'Twitter'
-          )
-        )
+        { className: 'fl w-100' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'contactTitle', className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/contact.png' })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { id: 'contact', className: 'vh-50-ns fl w-100 center ph6-ns pa5-ns' },
+        this.props.contactInfo.map(contact => {
+          return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { key: contact.id, id: contact.id, className: 'fl w-third pa2 h-100-ns' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { href: contact.link },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'vh-25-ns', src: contact.image })
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'p',
+              null,
+              contact.alt
+            )
+          );
+        })
       )
     );
   }
@@ -26749,6 +26768,47 @@ exports.navigationStart = now()
 /***/ (function(module, exports) {
 
 module.exports = {"_from":"scrollto-with-animation","_id":"scrollto-with-animation@4.5.2","_inBundle":false,"_integrity":"sha1-WoS10aHtlDvlRiVULXcxk9bBGd4=","_location":"/scrollto-with-animation","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"scrollto-with-animation","name":"scrollto-with-animation","escapedName":"scrollto-with-animation","rawSpec":"","saveSpec":null,"fetchSpec":"latest"},"_requiredBy":["#USER","/"],"_resolved":"https://registry.npmjs.org/scrollto-with-animation/-/scrollto-with-animation-4.5.2.tgz","_shasum":"5a84b5d1a1ed943be54625542d773193d6c119de","_spec":"scrollto-with-animation","_where":"/Users/tashadesai/Projects/personal-site","author":{"name":"David Sancho","email":"dsnxmoreno@gmail.com","url":"https://github.com/davesnx"},"bugs":{"url":"https://github.com/davesnx/scrollto-with-animation/issues"},"bundleDependencies":false,"dependencies":{"animation-frame":"^0.3.0"},"deprecated":false,"description":"Animated Scroll with requestAnimationFrame. For smooth animate scrollTo defining the easing, running at 60FPS and cross-browser","devDependencies":{"babel-cli":"^6.9.0","babel-loader":"^6.2.2","babel-preset-es2015":"^6.3.13","babel-preset-stage-2":"^6.3.13","jasmine-core":"^2.3.4","json-loader":"^0.5.4","karma":"^0.13.9","karma-chrome-launcher":"^0.2.1","karma-cli":"0.1.0","karma-coverage":"^0.5.3","karma-jasmine":"^0.3.6","karma-phantomjs-launcher":"^0.2.1","karma-sourcemap-loader":"^0.3.6","karma-spec-reporter":"0.0.22","karma-story-reporter":"^0.3.1","karma-webpack":"^1.7.0","phantomjs":"^1.9.18","pre-push":"^0.1.1","webpack":"^1.12.13"},"files":["src","lib","dist","README.md"],"homepage":"https://github.com/davesnx/scrollto-with-animation#readme","keywords":["animation","scrollTo","60fps","cross-browser","requestAnimationFrame","easeInQuad","browserify"],"license":"MIT","main":"lib/index.js","name":"scrollto-with-animation","pre-commit":["test"],"repository":{"type":"git","url":"git+https://github.com/davesnx/scrollto-with-animation.git"},"scripts":{"build":"npm run clean && npm run compile:prod && npm run minify:prod","clean":"rm -rf dist/* && rm -rf lib/","compile:dev":"NODE_ENV=dev babel src --watch --out-dir lib","compile:prod":"NODE_ENV=prod babel src --out-dir lib","minify:dev":"NODE_ENV=dev webpack --watch","minify:prod":"NODE_ENV=prod webpack -p","prepublish":"npm run build","test":"NODE_ENV=prod karma start test/karma.config.js --single-run","test:dev":"NODE_ENV=prod karma start test/karma.config.js --auto-watch"},"standard":{"parser":"babel-eslint","global":["jasmine","it","describe","beforeEach","afterEach","expect","spyOn"]},"version":"4.5.2"}
+
+/***/ }),
+/* 243 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(19);
+
+
+
+class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      { id: 'resume', className: 'fl w-100' },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'mw9 center ph3-ns' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'resumeTitle', className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/resume.png' })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'fl w-100 mw9 center ph3' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'This is my Resume Link'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'This is my resume'
+        )
+      )
+    );
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Resume);
 
 /***/ })
 /******/ ]);
