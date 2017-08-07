@@ -16,6 +16,7 @@ class Main extends Component {
     var divOffset = selectedDiv.offsetTop;
     var parentOffset = selectedDiv.offsetParent.offsetTop;
     var distanceToScroll = divOffset + parentOffset - 20;
+    console.log("recieve ", distanceToScroll)
 
     scrollToWithAnimation(document.body, 'scrollTop', distanceToScroll, 1000, 'linearTween');
   }
