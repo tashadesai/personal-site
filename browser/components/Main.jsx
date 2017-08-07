@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import { connect } from 'react-redux';
 import Menu from './Menu.jsx';
 import Content from './Content.jsx';
 
@@ -17,10 +16,11 @@ class Main extends Component {
       var innerHeight = this.innerHeight;
       var layers = document.querySelectorAll(".parallax");
       var layersFixed = document.querySelectorAll('.fixedMenu');
+      // var menuHeight = document.querySelectorAll('.menu') || document.querySelectorAll('.fixedMenu');
 
       //unfix menu from the top of screen
       if (layersFixed.length > 0 && ((topDistance + 70) <= innerHeight)) {
-        console.log("Here's where it un-happened ", topDistance, " * ", innerHeight)
+        // console.log("Here's where it un-happened ", topDistance, " * ", innerHeight, "height ", menuHeight)
         layersFixed[0].classList.add('parallax');
         layersFixed[0].classList.add('toBeStickied');
         layersFixed[0].classList.remove('fixedMenu');
@@ -35,7 +35,7 @@ class Main extends Component {
 
         //Fix menu bar to the top of screen
         if (layer.classList.contains('toBeStickied') && topDistance + 70 >= innerHeight) {
-          console.log("Here's where it happened ", topDistance, " * ", innerHeight)
+          // console.log("Here's where it happened ", topDistance, " * ", innerHeight, "height ", menuHeight)
           layer.classList.remove('parallax');
           layer.classList.remove('toBeStickied');
           layer.classList.remove('menu');
@@ -78,8 +78,4 @@ class Main extends Component {
   }
 }
 
-const mapStateToProps = state => ({});
-
-const mapDispatchToProps = dispatch => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default Main;

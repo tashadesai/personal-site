@@ -9,8 +9,8 @@ class Content extends Component {
   render() {
     return (
         <div id="content" className= "fl w-100">
-          <Projects />
           <About />
+          <Projects />
           <Contact />
         </div>
     );

@@ -40,9 +40,11 @@
    background-image: url('input_link_to_image_here');
 }
 .nameLogo {
-  background-size: 50%;
   background-position-y: 50%;
-  background-image: url('http://localhost:1337/layer-images/nameLwr.png')
+  /* background-size: 50%;
+  background-image: url('http://localhost:1337/layer-images/nameLwr.png'); */
+   background-size: 65%;
+  background-image: url('http://localhost:1337/layer-images/nameSerif.png');
 }
 
 .menu {
@@ -54,7 +56,7 @@
   height: 70px;
   color: white;
   z-index: 999;
-  border-bottom: 2px solid #b4bee7;
+  border-bottom: 2px solid rgba(220, 255, 238, 0.38);
 }
 
 .fixedMenu {
@@ -66,7 +68,7 @@
   height: 70px;
   color: white;
   z-index: 999;
-  border-bottom: 2px solid #b4bee7;
+  border-bottom: 2px solid rgba(220, 255, 238, 0.38);
 }
 
 .allMenuButtons {
@@ -77,16 +79,15 @@
 
 .menuButton {
   display: inline-block;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Karla', sans-serif;
+   /* font-size: 1.1em; */
+   font-size: 2.5vh;
   margin: 0 1.5em 0 1.5em;
   color: #e8e1ed;
 }
 
 .container {
-  /* display: flex; */
   justify-content: center;
-  /* flex-direction: column; */
-  /* height: 100vh; */
 }
 
 #content {
@@ -94,10 +95,15 @@
   width: 100%;
   position: relative;
   text-align: center;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  color: lightgray;
+  font-family: 'Muli',sans-serif;
+  font-size: 3vh;
 }
 
-#headshot {
-  background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
+ #headshot {
+  width: 35vh;
 }
 
 #entwineImg {
@@ -112,6 +118,13 @@
   background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
 }
 
-#title {
-  font-size: 2em;
+/* .title {
+  font-size: 3.5em;
+  font-family: 'Kavivanar', serif;
+  margin: 0 10vh 0 10vh;
+} */
+
+.titleImg {
+  height: 6vh;
 }
+
