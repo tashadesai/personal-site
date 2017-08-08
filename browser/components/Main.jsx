@@ -81,7 +81,7 @@ class Main extends Component {
           <div className="layer number3 parallax" datatype="parallax" data-depth="0.50"></div>
           <div className="layer nameLogo parallax" datatype="parallax" data-depth="0.50"></div>
           <div className="layer number4 parallax" datatype="parallax" data-depth="0.80"></div>
-            <img src="http://localhost:1337/layer-images/filler.png" className="picture parallax" data-depth="1.00" style={{height: `${this.innerHeight}`}} />
+            <img src="/layer-images/filler.png" className="picture parallax" data-depth="1.00" style={{height: `${this.innerHeight}`}} />
         </div>
         <Menu />
         <Content />

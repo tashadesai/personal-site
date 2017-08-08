@@ -7,13 +7,11 @@ class Resume extends Component {
     return (
       <div id="resume" className="fl w-100">
         <div className= "mw9 center ph3-ns">
-          <img id="resumeTitle" className="pt5 titleImg" src='http://localhost:1337/layer-images/resume.png' />
+          <img id="resumeTitle" className="pt5 titleImg" src='/layer-images/resume.png' />
         </div>
-        <div className="fl w-100 mw9 center ph3">
-          <p>This is my Resume Link</p>
-          <p>
-            This is my resume
-          </p>
+        <div className="fl w-100 center ph3-ns">
+          <p>Download my resume</p>
+          <embed className="fl w-100" type="application/pdf" src="/other-assets/Natasha Desai Resume PDF.pdf" width="640" height="480" />
           </div>
       </div>
     );

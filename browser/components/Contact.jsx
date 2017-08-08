@@ -7,7 +7,7 @@ class Contact extends Component {
     return (
         <div id="contact" className= "fl w-100 center ph3-ns">
           <div className="fl w-100">
-            <img id="contactTitle" className="pt5 titleImg" src='http://localhost:1337/layer-images/contact.png' />
+            <img id="contactTitle" className="pt5 titleImg" src='/layer-images/contact.png' />
           </div>
           <div id="contact" className= "vh-50-ns fl w-100 center ph6-ns pa5-ns">
 

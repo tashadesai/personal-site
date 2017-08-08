@@ -8,13 +8,13 @@ class Projects extends Component {
       <div id="projects" className="fl w-100">
 
         <div id="projectsTitle" className= "mw9 center ph3-ns">
-          <img className="pt5 titleImg" src='http://localhost:1337/layer-images/projects.png' />
+          <img className="pt5 titleImg" src='/layer-images/projects.png' />
         </div>
 
         {
           this.props.projectDetails.map(project => {
             return (
-              <div key={project.id} id={project.id} className="fl w-100 w-50-ns pa3 ph4">
+              <div key={project.id} id={project.id} className="fl w-100-ns pa3 ph4">
                 <p>{project.name}</p>
                   <img className="w-70" src={project.image}/>
                 <p>{project.description}</p>

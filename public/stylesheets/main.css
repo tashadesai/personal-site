@@ -2,9 +2,6 @@
   overflow: hidden;
   position: relative;
   height: 100vh;
-
-  /* display: flex;
-  justify-content: center; */
 }
 
 .layer {
@@ -18,19 +15,19 @@
 }
 
 .number1 {
-   background-image: url('http://localhost:1337/layer-images/layer1.png');
+   background-image: url('/layer-images/layer1.png');
    background-size: cover;
 }
 .number2 {
-   background-image: url('http://localhost:1337/layer-images/layer2.png');
+   background-image: url('/layer-images/layer2.png');
    background-size: cover;
 }
 .number3 {
-   background-image: url('http://localhost:1337/layer-images/layer3.png');
+   background-image: url('/layer-images/layer3.png');
    background-size: cover;
 }
 .number4 {
-   background-image: url('http://localhost:1337/layer-images/layer4.png');
+   background-image: url('/layer-images/layer4.png');
    background-size: cover;
 }
 .number5 {
@@ -42,9 +39,9 @@
 .nameLogo {
   background-position-y: 50%;
   /* background-size: 50%;
-  background-image: url('http://localhost:1337/layer-images/nameLwr.png'); */
+  background-image: url('/layer-images/nameLwr.png'); */
    background-size: 65%;
-  background-image: url('http://localhost:1337/layer-images/nameSerif.png');
+  background-image: url('/layer-images/nameSerif.png');
 }
 
 .menu {
@@ -92,15 +89,15 @@
 }
 
 #content {
-  background: white;
+  background: #313131;
   width: 100%;
   position: relative;
   text-align: center;
-  padding-left: 10vh;
-  padding-right: 10vh;
+  /* padding-left: 10vh;
+  padding-right: 10vh; */
   color: darkgray;
   font-family: 'Lustria',sans-serif;
-  font-size: 2.4vh;
+  font-size: 1.5rem;
   line-height: 1.5;
   letter-spacing: 0.08vh
 }
@@ -121,12 +118,6 @@
   background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
 }
 
-/* .title {
-  font-size: 3.5em;
-  font-family: 'Kavivanar', serif;
-  margin: 0 10vh 0 10vh;
-} */
-
 .titleImg {
   height: 6vh;
 }
@@ -136,5 +127,5 @@ a {
 }
 
 .boldText {
-  color: #2f2f2f;
+  color: black;
 }

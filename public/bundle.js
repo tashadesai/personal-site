@@ -25996,7 +25996,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number3 parallax', datatype: 'parallax', 'data-depth': '0.50' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer nameLogo parallax', datatype: 'parallax', 'data-depth': '0.50' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number4 parallax', datatype: 'parallax', 'data-depth': '0.80' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: 'http://localhost:1337/layer-images/filler.png', className: 'picture parallax', 'data-depth': '1.00', style: { height: `${this.innerHeight}` } })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/layer-images/filler.png', className: 'picture parallax', 'data-depth': '1.00', style: { height: `${this.innerHeight}` } })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Menu_jsx__["a" /* default */], null),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__Content_jsx__["a" /* default */], null)
@@ -26077,55 +26077,53 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     var projectDetails = [{
       id: 'entwine',
       name: 'entwine',
-      image: 'http://localhost:1337/images/projects/entwineImg1.png',
-      description: 'entwine is a smart CMS and publishing platform.  Inspired by recent award-winning projects like Bloomberg’s “What Is Code?” and the Huffington Post’s “America’s Most Admired Lawbreaker”, Entwine allows content creators to easily add interactivity and rich multimedia to their stories. Our smart text editor leverages natural language processing to parse a creator’s story and recommend a set of add-ons. The editor then generates fully-featured interactive maps, references for specific characters and high-quality header images.',
+      image: '/images/projects/entwineImg1.png',
+      description: 'entwine is a smart CMS and publishing platform.  Inspired by recent award-winning projects like Bloomberg’s “What Is Code?” and the Huffington Post’s “America’s Most Admired Lawbreaker", entwine allows content creators to easily add interactivity and rich multimedia to their stories. Our smart text editor leverages natural language processing to parse a creator’s story and recommend a set of add-ons. The editor then generates fully-featured interactive maps, references for specific characters and high-quality header images.',
       deployedLink: 'http://entwine.herokuapp.com/',
       github: 'https://github.com/sceneweaver/entwine'
     }, {
       id: 'storybookvr',
       name: 'StorybookVR',
-      image: 'http://localhost:1337/images/projects/storybookImg1.png',
-      description: 'Storybook VR is a twist on how we tell stories- it aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform dynamically creates virtual reality picture books for any story you may want to tell.The story entered will first be parsed for content, tone, and characters. Storybook VR then creates a unique virtual reality scene using those elements, texts, and visuals to inform how the VR scene looks and help tell the story. Each story takes place in a fully immersive, 3D virtual reality environment.',
+      image: '/images/projects/storybookImg1.png',
+      description: 'Storybook VR is a twist on how we tell stories- it aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform dynamically creates virtual reality picture books for any story you may want to tell.  The story entered will first be parsed for content, tone, and characters. Storybook VR then creates a unique virtual reality scene using those elements, texts, and visuals to inform how the VR scene looks and help tell the story. Each story takes place in a fully immersive, 3D virtual reality environment.',
       deployedLink: '',
       github: 'https://github.com/tashadesai/storybook'
     }, {
       id: 'monkeySee',
       name: 'Monkey See',
-      image: 'http://localhost:1337/images/projects/monkeyseeImg1.png',
-      description: 'Monkey See is an e-commerce website',
+      image: '/images/projects/monkeyseeImg1.png',
+      description: 'Monkey See is an e-commerce website selling ',
       deployedLink: '',
       github: ''
-      // ,
-      // {
-      //   id: 'personalSite',
-      //   name: 'Personal Site',
-      //   image: 'https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a',
-      //   description: 'this here!',
-      //   deployedLink: '',
-      //   github: 'https://github.com/tashadesai/personal-site'
-      // }
+    }, {
+      id: 'techTalk',
+      name: 'Talk on Blockchains',
+      image: 'images/projects/techtalkImg1.png',
+      description: 'this here!',
+      deployedLink: '',
+      github: 'https://github.com/tashadesai/personal-site'
     }];
 
     var contactInfo = [{
       id: 'linkedIn',
-      image: 'http://localhost:1337/images/linkedin.png',
+      image: '/images/linkedin.png',
       link: 'https://www.linkedin.com/in/desainatasha/',
       alt: 'desainatasha'
     }, {
       id: 'GitHub',
-      image: 'http://localhost:1337/images/github.png',
+      image: '/images/github.png',
       link: 'https://github.com/tashadesai',
       alt: 'tashadesai'
     }, {
       id: 'Email',
-      image: 'http://localhost:1337/images/email.png',
+      image: '/images/email.png',
       link: '',
       alt: 'tashadesai@gmail.com'
     }];
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'content', className: 'fl w-100' },
+      { id: 'content', className: 'fl w-100 pa6-ns' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__About_jsx__["a" /* default */], null),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects_jsx__["a" /* default */], { projectDetails: projectDetails }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Resume_jsx__["a" /* default */], null),
@@ -26155,12 +26153,12 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'projectsTitle', className: 'mw9 center ph3-ns' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/projects.png' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'pt5 titleImg', src: '/layer-images/projects.png' })
       ),
       this.props.projectDetails.map(project => {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { key: project.id, id: project.id, className: 'fl w-100 w-50-ns pa3 ph4' },
+          { key: project.id, id: project.id, className: 'fl w-100-ns pa3 ph4' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
             null,
@@ -26199,49 +26197,53 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'mw9 center ph3-ns' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'aboutTitle', className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/about.png' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'aboutTitle', className: 'pt5 titleImg', src: '/layer-images/about.png' })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'mw5 mw6-ns center pt4' },
+        { className: 'center ph7-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { className: 'fl w-100 pa3 ph4' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: 'http://localhost:1337/images/me.png', className: '' })
+          { className: 'fl w-30 pa3 ph4' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: '/images/me.png', className: '' })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'fl w-70 center pv6-ns' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'p',
+            null,
+            'Hi! I\'m Natasha, a ',
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'text',
+              { className: 'boldText' },
+              'software developer'
+            ),
+            ' based in ',
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'text',
+              { className: 'boldText' },
+              'New York'
+            ),
+            '. Currently, I\'m a ',
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'text',
+              { className: 'boldText' },
+              'teaching fellow'
+            ),
+            ' at ',
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'text',
+              { className: 'boldText' },
+              'Fullstack Academy of Code'
+            ),
+            '.'
+          )
         )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'fl w-100 center ph3' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'Hi! I\'m Natasha, a ',
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'text',
-            { className: 'boldText' },
-            'software developer'
-          ),
-          ' based in ',
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'text',
-            { className: 'boldText' },
-            'New York'
-          ),
-          '. Currently, I\'m a ',
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'text',
-            { className: 'boldText' },
-            'teaching fellow'
-          ),
-          ' at ',
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'text',
-            { className: 'boldText' },
-            'Fullstack Academy of Code'
-          ),
-          '.'
-        ),
+        { className: 'fl w-100-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
@@ -26273,7 +26275,7 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'fl w-100' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'contactTitle', className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/contact.png' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'contactTitle', className: 'pt5 titleImg', src: '/layer-images/contact.png' })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
@@ -26320,21 +26322,17 @@ class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'mw9 center ph3-ns' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'resumeTitle', className: 'pt5 titleImg', src: 'http://localhost:1337/layer-images/resume.png' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'resumeTitle', className: 'pt5 titleImg', src: '/layer-images/resume.png' })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'fl w-100 mw9 center ph3' },
+        { className: 'fl w-100 center ph3-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
-          'This is my Resume Link'
+          'Download my resume'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
-          null,
-          'This is my resume'
-        )
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('embed', { className: 'fl w-100', type: 'application/pdf', src: '/other-assets/Natasha Desai Resume PDF.pdf', width: '640', height: '480' })
       )
     );
   }
