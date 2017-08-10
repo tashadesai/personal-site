@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 class Contact extends Component {
   render() {
     return (
-        <div id="contact" className= "fl w-100 center ph3-ns">
+        <div id="contact" className= "fl w-100 center ph6-ns ph3-ns vh-100">
           <div className="fl w-100">
             <img id="contactTitle" className="pt5 titleImg" src='/layer-images/contact.png' />
           </div>

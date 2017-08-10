@@ -77,10 +77,9 @@
 .menuButton {
   display: inline-block;
   font-family: 'Carrois Gothic', sans-serif;
-   /* font-size: 1.1em; */
-  font-size: 3vh;
+  font-size: 3.2vh;
   margin: 0 1.5em 0 1.5em;
-  color: #e8e1ed;
+  color: white;
   letter-spacing: 0.3vh;
 }
 
@@ -92,21 +91,22 @@
   background: #313131;
   width: 100%;
   position: relative;
-  text-align: center;
+  /* text-align: center; */
   /* padding-left: 10vh;
   padding-right: 10vh; */
-  color: darkgray;
+  color: #b0b0b0;
   font-family: 'Lustria',sans-serif;
-  font-size: 1.5rem;
+  font-size: 25px;
   line-height: 1.5;
   letter-spacing: 0.08vh
 }
 
  #headshot {
-  width: 35vh;
+  /* width: 35vh; */
+  /* background-image: url('/images/aboutmeTexture1.png'); */
 }
 
-#entwineImg {
+/* #entwineImg {
   background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
 }
 
@@ -116,7 +116,7 @@
 
 #monkeySeeImg {
   background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
-}
+} */
 
 .titleImg {
   height: 6vh;
@@ -127,5 +127,13 @@ a {
 }
 
 .boldText {
-  color: black;
+  color: white;
+}
+
+#embededPDF {
+  height: 65vh;
+}
+
+#projects {
+    font-size: 20px;
 }

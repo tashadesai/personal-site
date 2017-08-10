@@ -26078,30 +26078,34 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       id: 'entwine',
       name: 'entwine',
       image: '/images/projects/entwineImg1.png',
-      description: 'entwine is a smart CMS and publishing platform.  Inspired by recent award-winning projects like Bloomberg’s “What Is Code?” and the Huffington Post’s “America’s Most Admired Lawbreaker", entwine allows content creators to easily add interactivity and rich multimedia to their stories. Our smart text editor leverages natural language processing to parse a creator’s story and recommend a set of add-ons. The editor then generates fully-featured interactive maps, references for specific characters and high-quality header images.',
+      description: 'Entwine is a smart CMS and publishing platform that leverages natural language processing to generate multimedia web content.  Through well designed code modules, it allows content creators to easily add interactivity and rich multimedia to their stories.',
       deployedLink: 'http://entwine.herokuapp.com/',
-      github: 'https://github.com/sceneweaver/entwine'
+      github: 'https://github.com/sceneweaver/entwine',
+      number: 1
     }, {
       id: 'storybookvr',
-      name: 'StorybookVR',
+      name: 'Storybook VR',
       image: '/images/projects/storybookImg1.png',
-      description: 'Storybook VR is a twist on how we tell stories- it aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform dynamically creates virtual reality picture books for any story you may want to tell.  The story entered will first be parsed for content, tone, and characters. Storybook VR then creates a unique virtual reality scene using those elements, texts, and visuals to inform how the VR scene looks and help tell the story. Each story takes place in a fully immersive, 3D virtual reality environment.',
+      description: 'Storybook VR aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform parses inputed stories for content and tone to dynamically render unique virtual reality picture books.  Each story takes place in a fully immersive, 3D virtual reality environment.',
       deployedLink: '',
-      github: 'https://github.com/tashadesai/storybook'
+      github: 'https://github.com/tashadesai/storybook',
+      number: 2
     }, {
       id: 'monkeySee',
       name: 'Monkey See',
       image: '/images/projects/monkeyseeImg1.png',
-      description: 'Monkey See is an e-commerce website selling ',
+      description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout fucntionality, and complete CSS styling.',
       deployedLink: '',
-      github: ''
+      github: '',
+      number: 3
     }, {
       id: 'techTalk',
-      name: 'Talk on Blockchains',
+      name: 'Technology Talk on Blockchains',
       image: 'images/projects/techtalkImg1.png',
-      description: 'this here!',
+      description: 'In this talk, I provide a brief introduction to the structure behind Bitcoin and other cryptocurrencies- the blockchain. I gives an overview of how blockchains work and how it has been implemented and also go into the benefits and possibilities of blockchain technology.',
       deployedLink: '',
-      github: 'https://github.com/tashadesai/personal-site'
+      github: 'https://github.com/tashadesai/personal-site',
+      number: 4
     }];
 
     var contactInfo = [{
@@ -26123,7 +26127,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'content', className: 'fl w-100 pa6-ns' },
+      { id: 'content', className: 'fl w-100 ph3-ns tc' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__About_jsx__["a" /* default */], null),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects_jsx__["a" /* default */], { projectDetails: projectDetails }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Resume_jsx__["a" /* default */], null),
@@ -26149,27 +26153,57 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'projects', className: 'fl w-100' },
+      { id: 'projects', className: 'fl w-100 ph6-ns' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'projectsTitle', className: 'mw9 center ph3-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'pt5 titleImg', src: '/layer-images/projects.png' })
       ),
       this.props.projectDetails.map(project => {
+        var oddDiv = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fl w-60', src: project.image }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'fl w-40 tl-ns ph4-ns' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'p',
+              null,
+              project.name
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'p',
+              null,
+              project.description
+            )
+          )
+        );
+
+        var evenDiv = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fr w-60', src: project.image }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'fl w-40 tr-ns ph4-ns' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'p',
+              null,
+              project.name
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'p',
+              null,
+              project.description
+            )
+          )
+        );
+
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { key: project.id, id: project.id, className: 'fl w-100-ns pa3 ph4' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            project.name
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'w-70', src: project.image }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'p',
-            null,
-            project.description
-          )
+          { key: project.number, id: project.id, className: 'fl w-100-ns pa4 ph4' },
+          project.number % 2 === 0 ? evenDiv : oddDiv
         );
       })
     );
@@ -26193,7 +26227,7 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'about', className: 'fl w-100' },
+      { id: 'about', className: 'fl w-100  ph6-ns' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'mw9 center ph3-ns' },
@@ -26204,15 +26238,10 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         { className: 'center ph7-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { className: 'fl w-30 pa3 ph4' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: '/images/me.png', className: '' })
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'fl w-70 center pv6-ns' },
+          { className: 'fl w-100 center ph3-ns' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
-            null,
+            { className: '' },
             'Hi! I\'m Natasha, a ',
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'text',
@@ -26239,6 +26268,15 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             ),
             '.'
           )
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'fl w-100 center ph7-ns' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'w-70-ns center' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: '/images/me3.png', className: '' })
         )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -26271,7 +26309,7 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'contact', className: 'fl w-100 center ph3-ns' },
+      { id: 'contact', className: 'fl w-100 center ph6-ns ph3-ns vh-100' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'fl w-100' },
@@ -26318,7 +26356,7 @@ class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'resume', className: 'fl w-100' },
+      { id: 'resume', className: 'fl w-100 ph6-ns' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'mw9 center ph3-ns' },
@@ -26332,7 +26370,7 @@ class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
           null,
           'Download my resume'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('embed', { className: 'fl w-100', type: 'application/pdf', src: '/other-assets/Natasha Desai Resume PDF.pdf', width: '640', height: '480' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('embed', { id: 'embededPDF', className: 'fl w-100', type: 'application/pdf', src: '/other-assets/Natasha Desai Resume PDF.pdf', width: '640', height: '480' })
       )
     );
   }

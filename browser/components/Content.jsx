@@ -14,33 +14,37 @@ class Content extends Component {
         id: 'entwine',
         name: 'entwine',
         image: '/images/projects/entwineImg1.png',
-        description: 'entwine is a smart CMS and publishing platform.  Inspired by recent award-winning projects like Bloomberg’s “What Is Code?” and the Huffington Post’s “America’s Most Admired Lawbreaker", entwine allows content creators to easily add interactivity and rich multimedia to their stories. Our smart text editor leverages natural language processing to parse a creator’s story and recommend a set of add-ons. The editor then generates fully-featured interactive maps, references for specific characters and high-quality header images.',
+        description: 'Entwine is a smart CMS and publishing platform that leverages natural language processing to generate multimedia web content.  Through well designed code modules, it allows content creators to easily add interactivity and rich multimedia to their stories.',
         deployedLink: 'http://entwine.herokuapp.com/',
-        github: 'https://github.com/sceneweaver/entwine'
+        github: 'https://github.com/sceneweaver/entwine',
+        number: 1
       },
       {
         id: 'storybookvr',
-        name: 'StorybookVR',
+        name: 'Storybook VR',
         image: '/images/projects/storybookImg1.png',
-        description: 'Storybook VR is a twist on how we tell stories- it aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform dynamically creates virtual reality picture books for any story you may want to tell.  The story entered will first be parsed for content, tone, and characters. Storybook VR then creates a unique virtual reality scene using those elements, texts, and visuals to inform how the VR scene looks and help tell the story. Each story takes place in a fully immersive, 3D virtual reality environment.',
+        description: 'Storybook VR aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform parses inputed stories for content and tone to dynamically render unique virtual reality picture books.  Each story takes place in a fully immersive, 3D virtual reality environment.',
         deployedLink: '',
-        github: 'https://github.com/tashadesai/storybook'
+        github: 'https://github.com/tashadesai/storybook',
+        number: 2
       },
       {
         id: 'monkeySee',
         name: 'Monkey See',
         image: '/images/projects/monkeyseeImg1.png',
-        description: 'Monkey See is an e-commerce website selling ',
+        description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout fucntionality, and complete CSS styling.',
         deployedLink: '',
-        github: ''
+        github: '',
+        number: 3
       },
       {
         id: 'techTalk',
-        name: 'Talk on Blockchains',
+        name: 'Technology Talk on Blockchains',
         image: 'images/projects/techtalkImg1.png',
-        description: 'this here!',
+        description: 'In this talk, I provide a brief introduction to the structure behind Bitcoin and other cryptocurrencies- the blockchain. I gives an overview of how blockchains work and how it has been implemented and also go into the benefits and possibilities of blockchain technology.',
         deployedLink: '',
-        github: 'https://github.com/tashadesai/personal-site'
+        github: 'https://github.com/tashadesai/personal-site',
+        number: 4
       }
     ];
 
@@ -66,7 +70,7 @@ class Content extends Component {
     ]
 
     return (
-        <div id="content" className= "fl w-100 pa6-ns">
+        <div id="content" className= "fl w-100 ph3-ns tc">
           <About />
           <Projects projectDetails={projectDetails} />
           <Resume />
