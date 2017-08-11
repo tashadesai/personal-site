@@ -26159,80 +26159,43 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'pt5 titleImg', src: '/layer-images/projects.png' })
       ),
       this.props.projectDetails.map(project => {
-        var oddDiv = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fl w-60-ns', src: project.image }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'fl w-40-ns tl-ns ph4-ns' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'h2',
-              { className: 'mt0' },
-              project.name
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              null,
-              project.description
-            ),
-            project.deployedLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'a',
-              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.deployedLink },
-              'View Project'
-            ) : null,
-            project.github ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'a',
-              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.github },
-              'View Code'
-            ) : null,
-            project.talkLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'a',
-              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.talkLink },
-              'View Talk'
-            ) : null
-          )
-        );
-
-        var evenDiv = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fr w-60-ns', src: project.image }),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            { className: 'fl w-40-ns tr-ns ph4-ns' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'h2',
-              { className: 'mt0' },
-              project.name
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              null,
-              project.description
-            ),
-            project.deployedLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'a',
-              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.deployedLink },
-              'View Project'
-            ) : null,
-            project.github ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'a',
-              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.github },
-              'View Code'
-            ) : null,
-            project.talkLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'a',
-              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.talkLink },
-              'View Talk'
-            ) : null
-          )
-        );
-
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { key: project.number, id: project.id, className: 'fl w-100-ns pv5 ph4' },
-          project.number % 2 === 0 ? evenDiv : oddDiv
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: (project.number % 2 === 0 ? "fr " : "fl ") + "w-60-ns", src: project.image }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: (project.number % 2 === 0 ? "tr-ns " : "tl-ns ") + "fl w-40-ns ph4-ns" },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'h2',
+                { className: 'mt0' },
+                project.name
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'p',
+                null,
+                project.description
+              ),
+              project.deployedLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'a',
+                { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.deployedLink },
+                'View Project'
+              ) : null,
+              project.github ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'a',
+                { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.github },
+                'View Code'
+              ) : null,
+              project.talkLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'a',
+                { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.talkLink },
+                'View Talk'
+              ) : null
+            )
+          )
         );
       })
     );
@@ -26264,13 +26227,13 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'fl w-100 center ph7-ns' },
+        { className: 'fl w-100 center' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { id: 'aboutP1', className: 'fl w-100 center ph3-ns' },
+          { id: 'aboutP1', className: 'fl w-100-ns center ph3-ns' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
-            { className: '' },
+            null,
             'Hi! I\'m Natasha, a ',
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'text',
@@ -26283,7 +26246,9 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { className: 'boldText' },
               'New York'
             ),
-            '. Currently, I\'m a ',
+            '. ',
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+            'Currently, I\'m a ',
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'text',
               { className: 'boldText' },
@@ -26297,12 +26262,12 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             ),
             '.'
           )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          { className: 'w-90-ns center' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: '/images/me5.png', className: '' })
         )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'w-70-ns center' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: '/images/me5.png', className: '' })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',

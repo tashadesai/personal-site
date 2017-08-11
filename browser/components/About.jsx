@@ -13,16 +13,16 @@ class About extends Component {
         {/* <div className= "center ph7-ns">
 
         </div> */}
-        <div className= "fl w-100 center ph7-ns">
-          <div id="aboutP1" className="fl w-100 center ph3-ns">
-            <p className="">Hi! I'm Natasha, a <text className="boldText">software developer</text> based in <text className="boldText">New York</text>.
+        <div className= "fl w-100 center">
+          <div id="aboutP1" className="fl w-100-ns center ph3-ns">
+            <p>Hi! I'm Natasha, a <text className="boldText">software developer</text> based in <text className="boldText">New York</text>. <br />
               Currently, I'm a <text className="boldText">teaching fellow</text> at <text className="boldText">Fullstack Academy of Code</text>.
             </p>
           </div>
-           <div className="w-90-ns center">
-              {/* <div id="headshot" /> */}
-               <img id="headshot" src="/images/me5.png" className= "" />
-          </div>
+        </div>
+        <div className="w-70-ns center">
+          {/* <div id="headshot" /> */}
+          <img id="headshot" src="/images/me5.png" className= "" />
         </div>
         <div id="aboutP2" className="fl w-100-ns">
           <p>
