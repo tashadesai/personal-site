@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 class About extends Component {
   render() {
     return (
-      <div id="about" className="fl w-100  ph6-ns">
+      <div id="about" className="fl w-100  ph6-ns pb4-ns">
         <div className= "mw9 center ph3-ns">
           <img id="aboutTitle" className="pt5 titleImg" src='/layer-images/about.png' />
         </div>

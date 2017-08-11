@@ -26168,9 +26168,9 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: (project.number % 2 === 0 ? "fr " : "fl ") + "w-60-ns", src: project.image }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
-              { className: (project.number % 2 === 0 ? "tr-ns " : "tl-ns ") + "fl w-40-ns ph4-ns" },
+              { className: (project.number % 2 === 0 ? "tr-ns pr4-ns " : "tl-ns pl4-ns ") + "fl w-40-ns" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'h2',
+                'h1',
                 { className: 'mt0' },
                 project.name
               ),
@@ -26219,7 +26219,7 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'about', className: 'fl w-100  ph6-ns' },
+      { id: 'about', className: 'fl w-100  ph6-ns pb4-ns' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'mw9 center ph3-ns' },
@@ -26309,9 +26309,9 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         'div',
         { id: 'contact', className: 'vh-50-ns fl w-100 center ph6-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'p',
+          'h3',
           null,
-          'Want to chat? Feel free to contact me!'
+          'Let\'s chat!'
         ),
         this.props.contactInfo.map(contact => {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -26351,7 +26351,7 @@ class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'resume', className: 'fl w-100 ph6-ns' },
+      { id: 'resume', className: 'fl w-100 ph6-ns pb5-ns' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'mw9 center ph3-ns' },
@@ -26359,7 +26359,7 @@ class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'fl w-100 center ph6-ns' },
+        { className: 'w-100-ns center ph6-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,

@@ -16,9 +16,9 @@ class Projects extends Component {
             return (
               <div key={project.number} id={project.id} className="fl w-100-ns pv5 ph4">
                 <div>
-                  <img className={(project.number % 2 === 0 ? "fr " : "fl ") + "w-60-ns"} src={project.image}/>
-                  <div className={(project.number % 2 === 0 ? "tr-ns " : "tl-ns ") + "fl w-40-ns ph4-ns"}>
-                    <h2 className="mt0">{project.name}</h2>
+                  <img className={(project.number % 2 === 0 ? "fr " : "fl ") + "w-60-ns"} src={project.image} />
+                  <div className={(project.number % 2 === 0 ? "tr-ns pr4-ns " : "tl-ns pl4-ns ") + "fl w-40-ns"}>
+                    <h1 className="mt0">{project.name}</h1>
                     <p>{project.description}</p>
                     {project.deployedLink ?
                     <a className="link dim ba ph3 pv2 mb2 dib white" href={project.deployedLink}>View Project</a> : null}
