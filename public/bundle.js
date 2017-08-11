@@ -25991,11 +25991,11 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'header', className: 'fl w-100' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number1 parallax', datatype: 'parallax', 'data-depth': '1.00' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number2 parallax', datatype: 'parallax', 'data-depth': '0.65' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number1 parallax', datatype: 'parallax', 'data-depth': '0.80' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number2 parallax', datatype: 'parallax', 'data-depth': '0.40' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number3 parallax', datatype: 'parallax', 'data-depth': '0.50' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer nameLogo parallax', datatype: 'parallax', 'data-depth': '0.50' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number4 parallax', datatype: 'parallax', 'data-depth': '0.80' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'layer number4 parallax', datatype: 'parallax', 'data-depth': '0.10' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/layer-images/filler.png', className: 'picture parallax', 'data-depth': '1.00', style: { height: `${this.innerHeight}` } })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Menu_jsx__["a" /* default */], null),
@@ -26005,6 +26005,9 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Main);
+
+//data depth trial 1: 1, 0.65, 0.5, 0.5, 0.8, 1(filler)
+//data depth trial 2: 0.8, 0.4, 0.5, 0.5, 0.1, 1(filler)
 
 /***/ }),
 /* 230 */
