@@ -24,8 +24,9 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internal server error');
 });
 
-app.listen(1337, function() {
-  console.log("Personal Site server listening on port 1337");
+const port = process.env.PORT || 1337;
+app.listen(port, function () {
+  console.log(`Personal Site server listening on port ${port}`);
 });
 
 module.exports = app;
