@@ -94,17 +94,18 @@
   /* text-align: center; */
   /* padding-left: 10vh;
   padding-right: 10vh; */
-  color: #b0b0b0;
+  color: #d7d7d7;
   font-family: 'Lustria',sans-serif;
   font-size: 25px;
   line-height: 1.5;
   letter-spacing: 0.08vh
 }
 
- #headshot {
-  /* width: 35vh; */
-  /* background-image: url('/images/aboutmeTexture1.png'); */
-}
+ /* #headshot {
+  height: 792px;
+  background-size: cover;
+  background-image: url('/images/me5.png');
+} */
 
 /* #entwineImg {
   background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
@@ -135,5 +136,16 @@ a {
 }
 
 #projects {
-    font-size: 20px;
+    font-size: 16px;
 }
+
+#aboutP2 {
+  margin-top: -10vh;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#aboutP1 {
+  margin-bottom: -10vh;
+}
+
+#intro {}

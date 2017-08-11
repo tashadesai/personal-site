@@ -26076,7 +26076,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     var projectDetails = [{
       id: 'entwine',
-      name: 'entwine',
+      name: 'Entwine',
       image: '/images/projects/entwineImg1.png',
       description: 'Entwine is a smart CMS and publishing platform that leverages natural language processing to generate multimedia web content.  Through well designed code modules, it allows content creators to easily add interactivity and rich multimedia to their stories.',
       deployedLink: 'http://entwine.herokuapp.com/',
@@ -26086,25 +26086,24 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       id: 'storybookvr',
       name: 'Storybook VR',
       image: '/images/projects/storybookImg1.png',
-      description: 'Storybook VR aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform parses inputed stories for content and tone to dynamically render unique virtual reality picture books.  Each story takes place in a fully immersive, 3D virtual reality environment.',
-      deployedLink: '',
+      description: 'Storybook VR aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform parses entered stories for content and tone to dynamically render unique virtual reality picture books.',
+      deployedLink: undefined,
       github: 'https://github.com/tashadesai/storybook',
       number: 2
     }, {
       id: 'monkeySee',
       name: 'Monkey See',
       image: '/images/projects/monkeyseeImg1.png',
-      description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout fucntionality, and complete CSS styling.',
-      deployedLink: '',
-      github: '',
+      description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout functionality, and complete CSS styling.',
+      deployedLink: 'https://monkey-see.herokuapp.com/',
+      github: 'https://github.com/monkey-see/graceshopper',
       number: 3
     }, {
       id: 'techTalk',
       name: 'Technology Talk on Blockchains',
       image: 'images/projects/techtalkImg1.png',
-      description: 'In this talk, I provide a brief introduction to the structure behind Bitcoin and other cryptocurrencies- the blockchain. I gives an overview of how blockchains work and how it has been implemented and also go into the benefits and possibilities of blockchain technology.',
-      deployedLink: '',
-      github: 'https://github.com/tashadesai/personal-site',
+      description: 'In this talk, I provide a brief introduction to blockchain- the structure behind Bitcoin and other cryptocurrencies. I give an overview of how blockchains work, how it has been implemented, and the benefits and possibilities of blockchain technology.',
+      talkLink: 'https://www.youtube.com/watch?v=UuFyYNxS8bY&t',
       number: 4
     }];
 
@@ -26163,46 +26162,76 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         var oddDiv = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fl w-60', src: project.image }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fl w-60-ns', src: project.image }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: 'fl w-40 tl-ns ph4-ns' },
+            { className: 'fl w-40-ns tl-ns ph4-ns' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              null,
+              'h2',
+              { className: 'mt0' },
               project.name
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'p',
               null,
               project.description
-            )
+            ),
+            project.deployedLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.deployedLink },
+              'View Project'
+            ) : null,
+            project.github ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.github },
+              'View Code'
+            ) : null,
+            project.talkLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.talkLink },
+              'View Talk'
+            ) : null
           )
         );
 
         var evenDiv = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fr w-60', src: project.image }),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'fr w-60-ns', src: project.image }),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: 'fl w-40 tr-ns ph4-ns' },
+            { className: 'fl w-40-ns tr-ns ph4-ns' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'p',
-              null,
+              'h2',
+              { className: 'mt0' },
               project.name
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'p',
               null,
               project.description
-            )
+            ),
+            project.deployedLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.deployedLink },
+              'View Project'
+            ) : null,
+            project.github ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.github },
+              'View Code'
+            ) : null,
+            project.talkLink ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'a',
+              { className: 'link dim ba ph3 pv2 mb2 dib white', href: project.talkLink },
+              'View Talk'
+            ) : null
           )
         );
 
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { key: project.number, id: project.id, className: 'fl w-100-ns pa4 ph4' },
+          { key: project.number, id: project.id, className: 'fl w-100-ns pv5 ph4' },
           project.number % 2 === 0 ? evenDiv : oddDiv
         );
       })
@@ -26235,10 +26264,10 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'center ph7-ns' },
+        { className: 'fl w-100 center ph7-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { className: 'fl w-100 center ph3-ns' },
+          { id: 'aboutP1', className: 'fl w-100 center ph3-ns' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'p',
             { className: '' },
@@ -26268,24 +26297,20 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             ),
             '.'
           )
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        { className: 'fl w-100 center ph7-ns' },
+        ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
-          { className: 'w-70-ns center' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: '/images/me3.png', className: '' })
+          { className: 'w-90-ns center' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { id: 'headshot', src: '/images/me5.png', className: '' })
         )
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'fl w-100-ns' },
+        { id: 'aboutP2', className: 'fl w-100-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
-          'Growing up, I loved making websites.  I taught myself the basics, got ahold of a copy of photoshop and went wild.  I made the kind of ridiculous websites an eight year old would make, and I loved it. I loved deciding what I wanted to build and having to figure out how to build it. Since then, programming has always been something I was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\'ve always loved- which led me to Fullstack Academy of Code where I spent 17 weeks learning full stack JavaScript.'
+          'Growing up, I loved making websites.  I taught myself the basics, got ahold of a copy of Photoshop and went wild.  I made the kind of ridiculous websites an eight year old would make, and I loved it.  I loved deciding what I wanted to build and then having to figure out how to build it.  Since then, programming has always been something I was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\'ve always loved- which led me to Fullstack Academy of Code where I spent 17 weeks in an immersive program learning full stack JavaScript.'
         )
       )
     );
@@ -26317,7 +26342,12 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { id: 'contact', className: 'vh-50-ns fl w-100 center ph6-ns pa5-ns' },
+        { id: 'contact', className: 'vh-50-ns fl w-100 center ph6-ns' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          'Want to chat? Feel free to contact me!'
+        ),
         this.props.contactInfo.map(contact => {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
@@ -26364,7 +26394,7 @@ class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: 'fl w-100 center ph3-ns' },
+        { className: 'fl w-100 center ph6-ns' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,

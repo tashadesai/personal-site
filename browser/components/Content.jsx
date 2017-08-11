@@ -12,7 +12,7 @@ class Content extends Component {
     var projectDetails = [
       {
         id: 'entwine',
-        name: 'entwine',
+        name: 'Entwine',
         image: '/images/projects/entwineImg1.png',
         description: 'Entwine is a smart CMS and publishing platform that leverages natural language processing to generate multimedia web content.  Through well designed code modules, it allows content creators to easily add interactivity and rich multimedia to their stories.',
         deployedLink: 'http://entwine.herokuapp.com/',
@@ -23,8 +23,8 @@ class Content extends Component {
         id: 'storybookvr',
         name: 'Storybook VR',
         image: '/images/projects/storybookImg1.png',
-        description: 'Storybook VR aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform parses inputed stories for content and tone to dynamically render unique virtual reality picture books.  Each story takes place in a fully immersive, 3D virtual reality environment.',
-        deployedLink: '',
+        description: 'Storybook VR aims to bring technology and traditional storytelling together to create a fully immersive, virtual storytelling experience. The platform parses entered stories for content and tone to dynamically render unique virtual reality picture books.',
+        deployedLink: undefined,
         github: 'https://github.com/tashadesai/storybook',
         number: 2
       },
@@ -32,18 +32,17 @@ class Content extends Component {
         id: 'monkeySee',
         name: 'Monkey See',
         image: '/images/projects/monkeyseeImg1.png',
-        description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout fucntionality, and complete CSS styling.',
-        deployedLink: '',
-        github: '',
+        description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout functionality, and complete CSS styling.',
+        deployedLink: 'https://monkey-see.herokuapp.com/',
+        github: 'https://github.com/monkey-see/graceshopper',
         number: 3
       },
       {
         id: 'techTalk',
         name: 'Technology Talk on Blockchains',
         image: 'images/projects/techtalkImg1.png',
-        description: 'In this talk, I provide a brief introduction to the structure behind Bitcoin and other cryptocurrencies- the blockchain. I gives an overview of how blockchains work and how it has been implemented and also go into the benefits and possibilities of blockchain technology.',
-        deployedLink: '',
-        github: 'https://github.com/tashadesai/personal-site',
+        description: 'In this talk, I provide a brief introduction to blockchain- the structure behind Bitcoin and other cryptocurrencies. I give an overview of how blockchains work, how it has been implemented, and the benefits and possibilities of blockchain technology.',
+        talkLink: 'https://www.youtube.com/watch?v=UuFyYNxS8bY&t',
         number: 4
       }
     ];
