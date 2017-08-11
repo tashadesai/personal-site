@@ -63,7 +63,7 @@ class Content extends Component {
       {
         id: 'Email',
         image: '/images/email.png',
-        link: '',
+        link: 'mailto:tashadesai@gmail.com',
         alt: 'tashadesai@gmail.com'
       }
     ]

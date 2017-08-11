@@ -26123,7 +26123,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     }, {
       id: 'Email',
       image: '/images/email.png',
-      link: '',
+      link: 'mailto:tashadesai@gmail.com',
       alt: 'tashadesai@gmail.com'
     }];
 
