@@ -46,7 +46,7 @@
 
 .menu {
   background: #565656;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   right: 0;
@@ -58,7 +58,7 @@
 
 .fixedMenu {
   background: #565656;
-  position: fixed;
+   /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
@@ -90,10 +90,6 @@
 #content {
   background: #313131;
   width: 100%;
-  position: relative;
-  /* text-align: center; */
-  /* padding-left: 10vh;
-  padding-right: 10vh; */
   color: #d7d7d7;
   font-family: 'Lustria',sans-serif;
   font-size: 25px;

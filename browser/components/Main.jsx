@@ -32,7 +32,7 @@ class Main extends Component {
 
       //unfix menu from the top of screen
       if (layersFixed.length > 0 && ((topDistance + 70) <= innerHeight)) {
-        // console.log("Here's where it un-happened ", topDistance, " * ", innerHeight, "height ", menuHeight)
+        console.log("Here's where it un-happened ", topDistance, " * ", innerHeight)
         layersFixed[0].classList.add('parallax');
         layersFixed[0].classList.add('toBeStickied');
         layersFixed[0].classList.remove('fixedMenu');
@@ -47,20 +47,19 @@ class Main extends Component {
 
         //Fix menu bar to the top of screen
         if (layer.classList.contains('toBeStickied') && topDistance + 70 >= innerHeight) {
-          // console.log("Here's where it happened ", topDistance, " * ", innerHeight, "height ", menuHeight)
           layer.classList.remove('parallax');
           layer.classList.remove('toBeStickied');
           layer.classList.remove('menu');
           layer.classList.add('fixedMenu');
           var fixed = document.querySelectorAll('.fixedMenu')[0];
 
+          // var fixedTranslate = 'translate3d(0px, ' +  -(innerHeight-70) + 'px, 0px)';
           var fixedTranslate = 'translate3d(0px, 0px, 0px)';
           fixed.style['-moz-transform'] = fixedTranslate;
           fixed.style['-ms-transform'] = fixedTranslate;
           fixed.style['-o-transform'] = fixedTranslate;
           fixed.style['transform'] = fixedTranslate;
 
-          console.log(layer)
         } else {
           var translate3d = 'translate3d(0, ' + movement + 'px, 0)';
           layer.style['-moz-transform'] = translate3d;
