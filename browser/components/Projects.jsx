@@ -18,7 +18,7 @@ class Projects extends Component {
                 <div>
                   <img className={(project.number % 2 === 0 ? "fr " : "fl ") + "w-60-ns"} src={project.image} />
                   <div className={(project.number % 2 === 0 ? "tr-ns pr4-ns " : "tl-ns pl4-ns ") + "fl w-40-ns"}>
-                    <h1 className="mt0">{project.name}</h1>
+                    <h1 id="projectHeader" className="mt0">{project.name}</h1>
                     <p>{project.description}</p>
                     {project.deployedLink ?
                     <a className="link dim ba ph3 pv2 mb2 dib white" href={project.deployedLink}>View Project</a> : null}

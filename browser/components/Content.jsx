@@ -69,7 +69,7 @@ class Content extends Component {
     ]
 
     return (
-        <div id="content" className= "fl w-100 ph3-ns tc">
+        <div id="content" className= "fl w-100 ph3-ns tc toBeStickied">
           <About />
           <Projects projectDetails={projectDetails} />
           <Resume />

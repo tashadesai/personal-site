@@ -1,7 +1,7 @@
  #header {
   overflow: hidden;
   position: relative;
-  height: 100vh;
+  height: 90vh;
 }
 
 .layer {
@@ -46,7 +46,7 @@
 
 .menu {
   background: #565656;
-  /* position: fixed; */
+   position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -58,7 +58,7 @@
 
 .fixedMenu {
   background: #565656;
-   /* position: fixed; */
+    position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -95,6 +95,10 @@
   font-size: 25px;
   line-height: 1.5;
   letter-spacing: 0.08vh
+}
+
+.contentFixed {
+  padding-top: 70px;
 }
 
  /* #headshot {
@@ -142,4 +146,9 @@ a {
 
 #aboutP1 {
   margin-bottom: -8vh;
+}
+
+#projectHeader {
+  color: white;
+  letter-spacing: 0.6vh
 }

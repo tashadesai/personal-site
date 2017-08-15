@@ -25940,11 +25940,13 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       var innerHeight = this.innerHeight;
       var layers = document.querySelectorAll(".parallax");
       var layersFixed = document.querySelectorAll('.fixedMenu');
+      var content = document.querySelectorAll("#content");
       // var menuHeight = document.querySelectorAll('.menu') || document.querySelectorAll('.fixedMenu');
 
       //unfix menu from the top of screen
       if (layersFixed.length > 0 && topDistance + 70 <= innerHeight) {
-        console.log("Here's where it un-happened ", topDistance, " * ", innerHeight);
+        // console.log("Here's where it un-happened ", topDistance, " * ", innerHeight)
+        content[0].classList.remove('contentFixed');
         layersFixed[0].classList.add('parallax');
         layersFixed[0].classList.add('toBeStickied');
         layersFixed[0].classList.remove('fixedMenu');
@@ -25956,13 +25958,16 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         var layer = layers[i];
         var depth = layer.getAttribute('data-depth');
         var movement = -(topDistance * depth);
+        var content = document.querySelectorAll("#content");
 
         //Fix menu bar to the top of screen
         if (layer.classList.contains('toBeStickied') && topDistance + 70 >= innerHeight) {
+          // console.log("where the menu stuck ", topDistance + 70, " ", innerHeight)
           layer.classList.remove('parallax');
           layer.classList.remove('toBeStickied');
           layer.classList.remove('menu');
           layer.classList.add('fixedMenu');
+          content[0].classList.add('contentFixed');
           var fixed = document.querySelectorAll('.fixedMenu')[0];
 
           // var fixedTranslate = 'translate3d(0px, ' +  -(innerHeight-70) + 'px, 0px)';
@@ -26022,7 +26027,7 @@ class Menu extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: 'dt w-100 layer menu toBeStickied parallax', 'data-depth': '1.00' },
+      { className: 'dt w-100 layer menu toBeStickied parallax' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'dtc v-mid tc ph3 ph4-l center allMenuButtons' },
@@ -26127,7 +26132,7 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'content', className: 'fl w-100 ph3-ns tc' },
+      { id: 'content', className: 'fl w-100 ph3-ns tc toBeStickied' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__About_jsx__["a" /* default */], null),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Projects_jsx__["a" /* default */], { projectDetails: projectDetails }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__Resume_jsx__["a" /* default */], null),
@@ -26172,7 +26177,7 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { className: (project.number % 2 === 0 ? "tr-ns pr4-ns " : "tl-ns pl4-ns ") + "fl w-40-ns" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h1',
-                { className: 'mt0' },
+                { id: 'projectHeader', className: 'mt0' },
                 project.name
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
