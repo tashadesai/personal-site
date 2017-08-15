@@ -26281,7 +26281,7 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
-          'Growing up, I loved making websites.  I taught myself the basics, got ahold of a copy of Photoshop and went wild.  I made the kind of ridiculous websites an eight year old would make.  I enjoyed deciding what I wanted to build and then having to figure out how to build it.  Since then, programming has always been something I was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\'ve always loved- which led me to Fullstack Academy of Code where I spent 17 weeks in an immersive program learning full stack JavaScript.'
+          'Growing up, I loved building websites.  I taught myself the basics, got ahold of a few Geocities domains and went wild.  I made the kind of ridiculous websites an eight year old would make- and I was enthralled.  Since then, programming has always been something i was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\u2019ve always loved.  This led me to Fullstack Academy of Code in New York City where I spent 17 weeks learning full stack JavaScript.'
         )
       )
     );

@@ -9,10 +9,6 @@ class About extends Component {
         <div className= "mw9 center ph3-ns">
           <img id="aboutTitle" className="pt5 titleImg" src='/layer-images/about.png' />
         </div>
-
-        {/* <div className= "center ph7-ns">
-
-        </div> */}
         <div className= "fl w-100 center">
           <div id="aboutP1" className="fl w-100-ns center ph3-ns">
             <p>Hi! I'm Natasha, a <text className="boldText">software developer</text> based in <text className="boldText">New York</text>. <br />
@@ -26,7 +22,7 @@ class About extends Component {
         </div>
         <div id="aboutP2" className="fl w-100-ns">
           <p>
-            Growing up, I loved making websites.  I taught myself the basics, got ahold of a copy of Photoshop and went wild.  I made the kind of ridiculous websites an eight year old would make.  I enjoyed deciding what I wanted to build and then having to figure out how to build it.  Since then, programming has always been something I was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I've always loved- which led me to Fullstack Academy of Code where I spent 17 weeks in an immersive program learning full stack JavaScript.
+            Growing up, I loved building websites.  I taught myself the basics, got ahold of a few Geocities domains and went wild.  I made the kind of ridiculous websites an eight year old would make- and I was enthralled.  Since then, programming has always been something i was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I’ve always loved.  This led me to Fullstack Academy of Code in New York City where I spent 17 weeks learning full stack JavaScript.
           </p>
         </div>
 
