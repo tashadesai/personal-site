@@ -26177,7 +26177,7 @@ class Projects extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
               { className: (project.number % 2 === 0 ? "tr-ns pr4-ns " : "tl-ns pl4-ns ") + "fl w-40-ns" },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h1',
-                { className: 'mt0' },
+                { id: 'projectHeader', className: 'mt0' },
                 project.name
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

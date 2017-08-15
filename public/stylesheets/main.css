@@ -147,3 +147,8 @@ a {
 #aboutP1 {
   margin-bottom: -8vh;
 }
+
+#projectHeader {
+  color: white;
+  letter-spacing: 0.6vh
+}
