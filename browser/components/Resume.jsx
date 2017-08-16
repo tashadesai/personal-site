@@ -10,7 +10,7 @@ class Resume extends Component {
           <img id="resumeTitle" className="pt5 titleImg" src='/layer-images/resume.png' />
         </div>
         <div className="w-100-ns center ph6-ns">
-          <p>Download my resume</p>
+          <p><a className="pa3-ns" href="/other-assets/NatashaDesaiAug2017.pdf">Download my resume</a></p>
           <embed id="embededPDF" className="fl w-100" type="application/pdf" src="/other-assets/NatashaDesaiAug2017.pdf" width="640" height="480" />
           </div>
       </div>
