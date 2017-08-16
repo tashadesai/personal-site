@@ -16,25 +16,21 @@ class Main extends Component {
     var divOffset = selectedDiv.offsetTop;
     var parentOffset = selectedDiv.offsetParent.offsetTop;
     var distanceToScroll = divOffset + parentOffset - 20;
-    console.log("received ", distanceToScroll, "from ", selectedDiv)
 
     scrollToWithAnimation(document.body, 'scrollTop', distanceToScroll, 1000, 'linearTween');
   }
 
   componentWillMount() {
     window.addEventListener("scroll", function(event) {
-
       var topDistance = this.pageYOffset;
       var innerHeight = this.innerHeight;
       var layers = document.querySelectorAll(".parallax");
       var layersFixed = document.querySelectorAll('.fixedMenu');
-      var content = document.querySelectorAll("#content");
-      // var menuHeight = document.querySelectorAll('.menu') || document.querySelectorAll('.fixedMenu');
+      var content = document.querySelector("#content");
 
       //unfix menu from the top of screen
       if (layersFixed.length > 0 && ((topDistance + 70) <= innerHeight)) {
-        // console.log("Here's where it un-happened ", topDistance, " * ", innerHeight)
-        content[0].classList.remove('contentFixed');
+        content.style['padding-top'] = '0';
         layersFixed[0].classList.add('parallax');
         layersFixed[0].classList.add('toBeStickied');
         layersFixed[0].classList.remove('fixedMenu');
@@ -46,19 +42,17 @@ class Main extends Component {
         var layer = layers[i];
         var depth = layer.getAttribute('data-depth');
         var movement = -(topDistance * depth);
-        var content = document.querySelectorAll("#content");
+        var content = document.querySelector("#content");
 
         //Fix menu bar to the top of screen
         if (layer.classList.contains('toBeStickied') && topDistance + 70 >= innerHeight) {
-          // console.log("where the menu stuck ", topDistance + 70, " ", innerHeight)
           layer.classList.remove('parallax');
           layer.classList.remove('toBeStickied');
           layer.classList.remove('menu');
           layer.classList.add('fixedMenu');
-          content[0].classList.add('contentFixed');
           var fixed = document.querySelectorAll('.fixedMenu')[0];
+          content.style['padding-top'] = document.querySelectorAll("#menu")[0].offsetHeight + 'px';
 
-          // var fixedTranslate = 'translate3d(0px, ' +  -(innerHeight-70) + 'px, 0px)';
           var fixedTranslate = 'translate3d(0px, 0px, 0px)';
           fixed.style['-moz-transform'] = fixedTranslate;
           fixed.style['-ms-transform'] = fixedTranslate;
@@ -74,6 +68,14 @@ class Main extends Component {
         }
       }
     });
+
+    window.addEventListener("resize", function(event) {
+      document.querySelector("#header").style['height'] = (innerHeight - 70) + 'px';
+    });
+  }
+
+  componentDidMount() {
+    document.querySelector("#header").style['height'] = (innerHeight - 70) + 'px';
   }
 
   render() {

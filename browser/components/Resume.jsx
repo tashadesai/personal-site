@@ -11,7 +11,7 @@ class Resume extends Component {
         </div>
         <div className="w-100-ns center ph6-ns">
           <p>Download my resume</p>
-          <embed id="embededPDF" className="fl w-100" type="application/pdf" src="/other-assets/Natasha Desai Resume PDF.pdf" width="640" height="480" />
+          <embed id="embededPDF" className="fl w-100" type="application/pdf" src="/other-assets/NatashaDesaiAug2017.pdf" width="640" height="480" />
           </div>
       </div>
     );
