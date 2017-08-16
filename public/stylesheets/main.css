@@ -38,8 +38,6 @@
 }
 .nameLogo {
   background-position-y: 50%;
-  /* background-size: 50%;
-  background-image: url('/layer-images/nameLwr.png'); */
    background-size: 65%;
   background-image: url('/layer-images/nameSerif.png');
 }
@@ -100,21 +98,6 @@
 .contentFixed {
   padding-top: 70px;
 }
-
- /* #headshot {
-  height: 792px;
-  background-size: cover;
-  background-image: url('/images/me5.png');
-} */
-
-/* #entwineImg {
-  background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
-}
-
-#storybookvrImg {
-  background-image: url('https://i.redditmedia.com/jtMkmkpkCaqfSqcQcTRE4WgDeg-liWzYllSmjuhYYbQ.jpg?w=560&s=1df2e77cad32174b18e4cbe6f8d3c83a');
-}
-
 
 .titleImg {
   height: 6vh;
