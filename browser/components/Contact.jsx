@@ -10,7 +10,7 @@ class Contact extends Component {
             <img id="contactTitle" className="pt5 titleImg" src='/layer-images/contact.png' />
           </div>
           <div id="contact" className= "vh-50-ns fl w-100 center ph6-ns">
-            <h3>Let's chat!</h3>
+            <h3></h3>
 
             {
               this.props.contactInfo.map(contact => {

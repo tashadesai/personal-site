@@ -26102,13 +26102,13 @@ class Content extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       id: 'monkeySee',
       name: 'Monkey See',
       image: '/images/projects/monkeyseeImg1.png',
-      description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout functionality, and complete CSS styling.',
+      description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functional e-commerce site including features such as product pages, checkout functionality, and complete CSS styling.',
       deployedLink: 'https://monkey-see.herokuapp.com/',
       github: 'https://github.com/monkey-see/graceshopper',
       number: 3
     }, {
       id: 'techTalk',
-      name: 'Technology Talk on Blockchains',
+      name: 'Technical Talk on Blockchains',
       image: 'images/projects/techtalkImg1.png',
       description: 'In this talk, I provide a brief introduction to blockchain- the structure behind Bitcoin and other cryptocurrencies. I give an overview of how blockchains work, how it has been implemented, and the benefits and possibilities of blockchain technology.',
       talkLink: 'https://www.youtube.com/watch?v=UuFyYNxS8bY&t',
@@ -26283,7 +26283,7 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
-          'Growing up, I loved building websites.  I taught myself the basics, got ahold of a few Geocities domains and went wild.  I made the kind of ridiculous websites an eight year old would make- and I was enthralled.  Since then, programming has always been something i was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\u2019ve always loved.  This led me to Fullstack Academy of Code in New York City where I spent 17 weeks learning full stack JavaScript.'
+          'Growing up, I loved building websites.  I taught myself the basics, got ahold of a few Geocities domains and went wild.  I made the kind of ridiculous websites an eight year old would make- and I was enthralled.  Since then, programming has always been something I was interested in.  After studying Economics at New York University and working in finance, I decided to go back to my childhood and what I\u2019ve always loved.  This led me to Fullstack Academy of Code where I spent 17 weeks learning full stack JavaScript.'
         )
       )
     );
@@ -26316,11 +26316,7 @@ class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { id: 'contact', className: 'vh-50-ns fl w-100 center ph6-ns' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'h3',
-          null,
-          'Let\'s chat!'
-        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('h3', null),
         this.props.contactInfo.map(contact => {
           return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',

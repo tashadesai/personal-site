@@ -32,14 +32,14 @@ class Content extends Component {
         id: 'monkeySee',
         name: 'Monkey See',
         image: '/images/projects/monkeyseeImg1.png',
-        description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functinal e-commerce site including features such as product pages, checkout functionality, and complete CSS styling.',
+        description: 'Monkey See is an e-commerce website selling eyeglasses.  Monkey See was built as a fully functional e-commerce site including features such as product pages, checkout functionality, and complete CSS styling.',
         deployedLink: 'https://monkey-see.herokuapp.com/',
         github: 'https://github.com/monkey-see/graceshopper',
         number: 3
       },
       {
         id: 'techTalk',
-        name: 'Technology Talk on Blockchains',
+        name: 'Technical Talk on Blockchains',
         image: 'images/projects/techtalkImg1.png',
         description: 'In this talk, I provide a brief introduction to blockchain- the structure behind Bitcoin and other cryptocurrencies. I give an overview of how blockchains work, how it has been implemented, and the benefits and possibilities of blockchain technology.',
         talkLink: 'https://www.youtube.com/watch?v=UuFyYNxS8bY&t',
