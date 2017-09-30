@@ -25,6 +25,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",
+    "scroll-to-js": "^1.0.5",
     "scrollto-with-animation": "^4.5.2",
     "sequelize": "^3.21.0"
   },

@@ -25912,6 +25912,9 @@ const history = __WEBPACK_IMPORTED_MODULE_0_history_createBrowserHistory___defau
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Content_jsx__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation__ = __webpack_require__(236);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_scroll_to_js__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_scroll_to_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_scroll_to_js__);
+
 
 
 
@@ -25929,7 +25932,13 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     var parentOffset = selectedDiv.offsetParent.offsetTop;
     var distanceToScroll = divOffset + parentOffset - 20;
 
-    __WEBPACK_IMPORTED_MODULE_4_scrollto_with_animation___default()(document.body, 'scrollTop', distanceToScroll, 1000, 'linearTween');
+    // scrollToWithAnimation(document.body, 'scrollTop', distanceToScroll, 1000, 'linearTween');
+
+    // scroller(document.body, distanceToScroll, 1000)
+
+    $('html, body').animate({
+      scrollTop: distanceToScroll
+    }, 1000);
   }
 
   componentWillMount() {
@@ -26859,6 +26868,74 @@ exports.navigationStart = now()
 /***/ (function(module, exports) {
 
 module.exports = {"_from":"scrollto-with-animation@^4.5.2","_id":"scrollto-with-animation@4.5.2","_inBundle":false,"_integrity":"sha1-WoS10aHtlDvlRiVULXcxk9bBGd4=","_location":"/scrollto-with-animation","_phantomChildren":{},"_requested":{"type":"range","registry":true,"raw":"scrollto-with-animation@^4.5.2","name":"scrollto-with-animation","escapedName":"scrollto-with-animation","rawSpec":"^4.5.2","saveSpec":null,"fetchSpec":"^4.5.2"},"_requiredBy":["/"],"_resolved":"https://registry.npmjs.org/scrollto-with-animation/-/scrollto-with-animation-4.5.2.tgz","_shasum":"5a84b5d1a1ed943be54625542d773193d6c119de","_spec":"scrollto-with-animation@^4.5.2","_where":"/Users/tashadesai/Projects/personal-site","author":{"name":"David Sancho","email":"dsnxmoreno@gmail.com","url":"https://github.com/davesnx"},"bugs":{"url":"https://github.com/davesnx/scrollto-with-animation/issues"},"bundleDependencies":false,"dependencies":{"animation-frame":"^0.3.0"},"deprecated":false,"description":"Animated Scroll with requestAnimationFrame. For smooth animate scrollTo defining the easing, running at 60FPS and cross-browser","devDependencies":{"babel-cli":"^6.9.0","babel-loader":"^6.2.2","babel-preset-es2015":"^6.3.13","babel-preset-stage-2":"^6.3.13","jasmine-core":"^2.3.4","json-loader":"^0.5.4","karma":"^0.13.9","karma-chrome-launcher":"^0.2.1","karma-cli":"0.1.0","karma-coverage":"^0.5.3","karma-jasmine":"^0.3.6","karma-phantomjs-launcher":"^0.2.1","karma-sourcemap-loader":"^0.3.6","karma-spec-reporter":"0.0.22","karma-story-reporter":"^0.3.1","karma-webpack":"^1.7.0","phantomjs":"^1.9.18","pre-push":"^0.1.1","webpack":"^1.12.13"},"files":["src","lib","dist","README.md"],"homepage":"https://github.com/davesnx/scrollto-with-animation#readme","keywords":["animation","scrollTo","60fps","cross-browser","requestAnimationFrame","easeInQuad","browserify"],"license":"MIT","main":"lib/index.js","name":"scrollto-with-animation","pre-commit":["test"],"repository":{"type":"git","url":"git+https://github.com/davesnx/scrollto-with-animation.git"},"scripts":{"build":"npm run clean && npm run compile:prod && npm run minify:prod","clean":"rm -rf dist/* && rm -rf lib/","compile:dev":"NODE_ENV=dev babel src --watch --out-dir lib","compile:prod":"NODE_ENV=prod babel src --out-dir lib","minify:dev":"NODE_ENV=dev webpack --watch","minify:prod":"NODE_ENV=prod webpack -p","prepublish":"npm run build","test":"NODE_ENV=prod karma start test/karma.config.js --single-run","test:dev":"NODE_ENV=prod karma start test/karma.config.js --auto-watch"},"standard":{"parser":"babel-eslint","global":["jasmine","it","describe","beforeEach","afterEach","expect","spyOn"]},"version":"4.5.2"}
+
+/***/ }),
+/* 244 */
+/***/ (function(module, exports) {
+
+module.exports = function(element, target, duration) {
+  target   = Math.round(target);
+  duration = Math.round(duration);
+
+  if (duration < 0) {
+    return Promise.reject("bad duration");
+  }
+
+  if (duration === 0) {
+    element.scrollTop = target;
+    return Promise.resolve();
+  }
+
+  var start_time = Date.now();
+  var end_time   = start_time + duration;
+
+  var start_top = element.scrollTop;
+  var distance  = target - start_top;
+
+  var smooth_step = function(start, end, point) {
+    if(point <= start) { return 0; }
+    if(point >= end) { return 1; }
+
+    var x = (point - start) / (end - start);
+
+    return x*x*(3 - 2*x);
+  }
+
+  return new Promise(function(resolve, reject) {
+    var previous_top = element.scrollTop;
+
+    var scroll_frame = function() {
+      if(element.scrollTop != previous_top) {
+        reject("interrupted");
+        return;
+      }
+
+      var now      = Date.now();
+      var point    = smooth_step(start_time, end_time, now);
+      var frameTop = Math.round(start_top + (distance * point));
+
+      element.scrollTop = frameTop;
+
+      if(now >= end_time) {
+        resolve();
+        return;
+      }
+
+      if(element.scrollTop === previous_top
+        && element.scrollTop !== frameTop) {
+        resolve();
+        return;
+      }
+
+      previous_top = element.scrollTop;
+
+      setTimeout(scroll_frame, 0);
+    }
+
+    setTimeout(scroll_frame, 0);
+  });
+}
+
 
 /***/ })
 /******/ ]);
