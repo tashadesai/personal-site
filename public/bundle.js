@@ -26378,11 +26378,11 @@ class Resume extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'a',
-            { className: 'pa3-ns', href: '/other-assets/Natasha Desai 2017.pdf' },
+            { className: 'pa3-ns', href: '/other-assets/NatashaDesai2018.pdf' },
             'Download my resume'
           )
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('embed', { id: 'embededPDF', className: 'fl w-100', type: 'application/pdf', src: '/other-assets/Natasha Desai 2018.pdf', width: '640', height: '480' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('embed', { id: 'embededPDF', className: 'fl w-100', type: 'application/pdf', src: '/other-assets/NatashaDesai2018.pdf', width: '640', height: '480' })
       )
     );
   }
