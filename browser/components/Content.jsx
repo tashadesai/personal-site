@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import Projects from './Projects.jsx';
 import About from './About.jsx';
 import Contact from './Contact.jsx';
 import Resume from './Resume.jsx';
-
 
 class Content extends Component {
 

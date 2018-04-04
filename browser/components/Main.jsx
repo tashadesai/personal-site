@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import Menu from './Menu.jsx';
 import Content from './Content.jsx';
 import scrollToWithAnimation from 'scrollto-with-animation';
 import scroller from 'scroll-to-js';
-
-
 
 class Main extends Component {
   constructor(props) {
