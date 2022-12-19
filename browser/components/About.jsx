@@ -9,7 +9,7 @@ class About extends Component {
         </div>
         <div className= "fl w-100 center">
           <div id="aboutP1" className="fl w-100-ns center ph3-ns">
-            <p>Hi! I'm Natasha, a <text className="boldText">software developer</text> based in <text className="boldText">New York</text>. <br />
+            <p>Hi! I am Natasha, a <text className="boldText">software developer</text> based in <text className="boldText">New York</text>. <br />
               Currently, I'm a <text className="boldText">teaching fellow</text> at <text className="boldText">Fullstack Academy of Code</text>.
             </p>
           </div>
